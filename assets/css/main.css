@@ -1,4 +1,4 @@
 html,
 body {
-  @apply bg-brand-100 text-brand-700 font-main scroll-smooth;
+  @apply bg-brand-700 text-brand-100 font-main scroll-smooth;
 }

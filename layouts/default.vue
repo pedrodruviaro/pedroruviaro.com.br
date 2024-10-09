@@ -1,7 +1,11 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
-    <slot />
-  </div>
+  <BaseContainer>
+    <LayoutHeader />
+    <main>
+      <slot />
+    </main>
+    <LayoutFooter />
+  </BaseContainer>
 </template>

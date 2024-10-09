@@ -3,13 +3,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        main: ["Roboto", "sans-serif"],
+        main: ["Raleway", "sans-serif"],
       },
       colors: {
         brand: {
-          100: "#f7f4f1",
-          700: "#31312f",
-          primary: "#e2e3dd",
+          100: "#ffffff",
+          300: "#DCD1BF",
+          500: "#4A4A45",
+          700: "#111010",
         },
       },
     },

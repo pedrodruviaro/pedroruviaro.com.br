@@ -6,11 +6,12 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    "@nuxt/image",
   ],
   css: ["~/assets/css/main.css"],
   googleFonts: {
     families: {
-      Roboto: [400, 600, 700, 900],
+      Raleway: true,
     },
   },
   site: {
