@@ -18,4 +18,7 @@ export default defineNuxtConfig({
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor FrontEnd",
   },
+  image: {
+    provider: process.env.CUSTOM_NUXT_IMAGE_PROVIDER,
+  },
 })
