@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
-    "@nuxt/image",
   ],
   css: ["~/assets/css/main.css"],
   googleFonts: {
@@ -17,8 +16,5 @@ export default defineNuxtConfig({
   site: {
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor FrontEnd",
-  },
-  image: {
-    provider: process.env.CUSTOM_NUXT_IMAGE_PROVIDER,
   },
 })

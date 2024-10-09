@@ -7,7 +7,7 @@
         <div>
           <NuxtLink to="/">
             <div>
-              <NuxtImg
+              <img
                 src="/images/logo.svg"
                 width="214"
                 height="38"
