@@ -6,9 +6,13 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
+    "@nuxt/content",
   ],
   css: ["~/assets/css/main.css"],
   googleFonts: {
+    base64: true,
+    fontsDir: "/assets/fonts",
+    overwriting: true,
     families: {
       Raleway: true,
     },
@@ -17,4 +21,6 @@ export default defineNuxtConfig({
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor FrontEnd",
   },
+
+  extends: "@nuxt-themes/typography",
 })

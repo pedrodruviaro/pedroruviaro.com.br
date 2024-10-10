@@ -1,4 +1,8 @@
+/* TODO -> Remove */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 html,
 body {
-  @apply bg-brand-700 text-brand-100 font-main scroll-smooth;
+  font-family: "Raleway", sans-serif;
+  @apply bg-brand-700 text-brand-100 scroll-smooth;
 }
