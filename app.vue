@@ -8,6 +8,7 @@ useHead({
 
 <template>
   <NuxtLayout>
+    <NuxtLoadingIndicator :height="4" color="#C3BAAB" />
     <NuxtPage />
   </NuxtLayout>
 </template>

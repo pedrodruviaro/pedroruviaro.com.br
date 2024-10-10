@@ -1,4 +1,4 @@
-# Nuxt Typography
+# Explorando o CSS: box-decoration-break
 
 Checkout [nuxt-themes/typography](https://github.com/nuxt-themes/typography) for the documentation, don't forget to give a :icon{name=ph:star}!
 
