@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <BaseCard variant="dark">experiencias</BaseCard>
+  <div>Nada por aqui ainda</div>
 </template>

@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Notes</div>
+  <div>Nada por aqui ainda</div>
 </template>

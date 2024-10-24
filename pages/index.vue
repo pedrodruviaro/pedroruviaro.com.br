@@ -8,16 +8,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="grid gap-6 lg:grid-cols-[3fr_1fr]">
+  <div>
     <HomeHero />
-    <div class="grid gap-6 grid-rows-[1fr_max-content]">
-      <HomeImage />
-      <HomeSocial />
-    </div>
-  </div>
-
-  <div class="grid gap-6 mt-6 lg:grid-cols-[1fr_1.5fr]">
-    <HomeExperiences />
-    <HomeLatestPosts />
+    <HomeSocialLinks class="mt-6" />
+    <HomeLatestPosts class="mt-10 lg:mt-20" />
   </div>
 </template>
