@@ -4,7 +4,7 @@
   <div>
     <ContentDoc>
       <template #not-found>
-        <ContentNotFound />
+        <PostsNotFound />
       </template>
     </ContentDoc>
   </div>

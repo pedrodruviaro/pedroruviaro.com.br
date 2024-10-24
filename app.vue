@@ -7,8 +7,11 @@ useHead({
 </script>
 
 <template>
-  <NuxtLayout>
-    <NuxtLoadingIndicator :height="4" color="#f8f7f4" />
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    <LayoutBanner />
+    <NuxtLayout>
+      <NuxtLoadingIndicator :height="4" color="#f8f7f4" />
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
