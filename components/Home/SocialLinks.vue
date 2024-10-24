@@ -40,14 +40,14 @@ const links = [
           :href="link.href"
           :target="link.target"
           :rel="link.rel"
-          class="opacity-75 hover:opacity-100"
+          class="opacity-75 hover:opacity-50"
         >
           <img
             :src="`/images/${link.iconPath}`"
             alt=""
             aria-hidden="true"
-            width="36"
-            height="36"
+            width="30"
+            height="30"
           />
         </NuxtLink>
       </li>

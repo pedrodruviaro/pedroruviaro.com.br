@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-full h grid place-items-center">
+  <div class="w-full h-full calc-h grid place-items-center">
     <div>
       <h1
         class="font-bold text-2xl lg:text-3xl text-balance mx-auto text-center"
@@ -17,7 +17,7 @@
 </template>
 
 <style scoped>
-.h {
+.calc-h {
   min-height: calc(100vh - (75px + 56px));
 }
 </style>

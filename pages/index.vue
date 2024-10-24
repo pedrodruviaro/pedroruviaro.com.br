@@ -11,6 +11,6 @@ useSeoMeta({
   <div>
     <HomeHero />
     <HomeSocialLinks class="mt-6" />
-    <HomeLatestPosts class="mt-10" />
+    <HomeLatestPosts class="mt-10 lg:mt-20" />
   </div>
 </template>

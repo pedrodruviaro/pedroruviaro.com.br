@@ -3,7 +3,7 @@
 <template>
   <BaseContainer>
     <LayoutHeader />
-    <main class="mt-10 lg:mt-16 main-content">
+    <main class="my-10 lg:my-16 main-content">
       <slot />
     </main>
     <LayoutFooter />
