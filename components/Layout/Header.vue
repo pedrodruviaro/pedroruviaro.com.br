@@ -1,8 +1,8 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="my-6">
-    <BaseCard>
+  <header class="mt-6 pb-4 border-b border-zinc-600">
+    <div>
       <div class="flex gap-4 flex-wrap justify-between items-center">
         <div>
           <NuxtLink to="/">
@@ -19,15 +19,16 @@
 
         <nav class="flex gap-4 items-center">
           <NuxtLink to="/" class="link">Início</NuxtLink>
-          <NuxtLink to="/notes" class="link">Notes</NuxtLink>
+          <NuxtLink to="/projects" class="link">Projetos</NuxtLink>
+          <NuxtLink to="/notes" class="link">Notas</NuxtLink>
         </nav>
       </div>
-    </BaseCard>
+    </div>
   </header>
 </template>
 
 <style scoped>
 .link {
-  @apply font-extrabold lg:text-lg hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-brand-500  focus:underline focus:decoration-2 focus:underline-offset-4 focus:decoration-brand-500 transition-all focus:outline-none focus:border-none;
+  @apply font-extrabold lg:text-lg hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-brand-500  focus:underline focus:decoration-2 focus:underline-offset-4 focus:decoration-brand-500  focus:outline-none focus:border-none;
 }
 </style>

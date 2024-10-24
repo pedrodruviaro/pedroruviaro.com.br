@@ -32,15 +32,15 @@ const links = [
 </script>
 
 <template>
-  <BaseCard>
-    <ul class="flex justify-around gap-2 items-center">
+  <section>
+    <ul class="flex gap-4 items-center">
       <li v-for="link in links" :key="link.href">
         <NuxtLink
           :aria-label="link.label"
           :href="link.href"
           :target="link.target"
           :rel="link.rel"
-          class="hover:opacity-85"
+          class="opacity-75 hover:opacity-100"
         >
           <img
             :src="`/images/${link.iconPath}`"
@@ -52,5 +52,5 @@ const links = [
         </NuxtLink>
       </li>
     </ul>
-  </BaseCard>
+  </section>
 </template>

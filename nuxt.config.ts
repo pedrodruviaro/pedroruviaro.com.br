@@ -19,8 +19,7 @@ export default defineNuxtConfig({
   },
   site: {
     url: "https://pedroruviaro.com.br/",
-    name: "pedroruviaro - Desenvolvedor FrontEnd",
+    name: "pedroruviaro - Desenvolvedor Front-End",
   },
-
   extends: "@nuxt-themes/typography",
 })

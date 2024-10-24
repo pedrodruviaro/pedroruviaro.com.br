@@ -1,5 +1,5 @@
 html,
 body {
   font-family: "Raleway", sans-serif;
-  @apply bg-brand-700 text-brand-100 scroll-smooth;
+  @apply bg-zinc-900 text-zinc-300 scroll-smooth;
 }
