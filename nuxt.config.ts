@@ -22,9 +22,4 @@ export default defineNuxtConfig({
     name: "pedroruviaro - Desenvolvedor Front-End",
   },
   extends: "@nuxt-themes/typography",
-  content: {
-    highlight: {
-      theme: "min-dark",
-    },
-  },
 })
