@@ -21,5 +21,8 @@ export default defineNuxtConfig({
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor Front-End",
   },
+  sitemap: {
+    strictNuxtContentPaths: true,
+  },
   extends: "@nuxt-themes/typography",
 })
