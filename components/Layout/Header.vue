@@ -19,8 +19,8 @@
 
         <nav class="flex gap-4 items-center">
           <NuxtLink to="/" class="link">Início</NuxtLink>
-          <NuxtLink to="/projects" class="link">Projetos</NuxtLink>
           <NuxtLink to="/notes" class="link">Notas</NuxtLink>
+          <NuxtLink to="/projects" class="link">Projetos</NuxtLink>
         </nav>
       </div>
     </div>
