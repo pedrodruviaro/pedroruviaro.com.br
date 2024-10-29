@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Notas",
+  description: "O que eu ando escrevendo",
+})
+
 const { data: notes } = await useAsyncData("home-notes", () =>
   queryContent("/notes").sort({ date: -1 }).find()
 )

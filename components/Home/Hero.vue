@@ -16,18 +16,40 @@
       <strong class="font-extrabold">Desenvolvedor Front End</strong>
     </h1>
     <p class="font-medium">
-      Com foco na stack JavaScript, trabalho com HTML, CSS, JS, Vue e Nuxt, com
-      grande foco em SEO. Gosto de compartilhar conhecimentos por aqui,
-      principalmente sobre front-end e carreira.
+      Desenvolvedor front-end apaixonado por tecnologia e aprendizado contínuo,
+      com foco no desenvolvimento front-end e estudo constante em back-end.
+      Tenho experiência em HTML, CSS, JavaScript, Vue e Nuxt, e estou buscando
+      abranger todo o ecossistema JavaScript e TypeScript. Atualmente, estudo
+      também tecnologias de back-end, como Node.js e Fastify.
     </p>
 
     <p class="font-medium mt-2">
-      Comecei minha jornada em 2021, migrando da área de Química, e desde então,
-      mergulho cada vez mais no mundo da tecnologia. Gosto de estudar, ensinar e
-      aprender coisas novas. Apesar de trabalhar 100% do tempo com front-end,
-      atualmente estudo Python e Go nas horas vagas. Em 2024, junto com uma
-      amiga, fundei a wire, onde prestamos serviços de desenvolvimento, design e
+      Iniciei minha jornada em 2021, migrando da área de Química, e desde então
+      tenho me aprofundado cada vez mais no universo da tecnologia. Gosto de
+      estudar, ensinar e aprender coisas novas. Apesar de atuar integralmente
+      com front-end, atualmente estudo Python e Go nas horas vagas. Em 2024,
+      fundei a
+      <NuxtLink
+        class="border-b inline-block border-dashed hover:opacity-80"
+        target="_blank"
+        rel="nofollow"
+        href="https://www.wire.art.br/"
+        >wire</NuxtLink
+      >
+      junto com uma amiga, onde oferecemos serviços de desenvolvimento, design e
       consultoria de SEO para empresas e pessoas físicas.
+    </p>
+
+    <p class="font-medium mt-2">
+      Você pode me encontrar facilmente pelo
+      <NuxtLink
+        class="border-b inline-block border-dashed hover:opacity-80"
+        target="_blank"
+        rel="nofollow"
+        href="https://www.linkedin.com/in/pedroruviaro/"
+        >LinkedIn</NuxtLink
+      >
+      ou pelos links abaixo.
     </p>
   </section>
 </template>
