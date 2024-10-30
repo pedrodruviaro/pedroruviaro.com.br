@@ -37,12 +37,7 @@ const formatDate = (date: string) => {
     class="block article pb-6 border-b border-zinc-700 border-dashed transition-all hover:transition-all hover:opacity-75 hover:border-zinc-400"
   >
     <div class="flex items-center gap-2 mb-3">
-      <span
-        v-if="props.tag"
-        class="text-xs block max-w-max text-center px-2.5 py-px bg-zinc-600 rounded-full"
-      >
-        {{ props.tag }}</span
-      >
+      <BaseTag v-if="props.tag">{{ props.tag }}</BaseTag>
       <p class="flex gap-2 items-center text-sm text-zinc-400">
         {{ formatDate(props.date) }}
       </p>

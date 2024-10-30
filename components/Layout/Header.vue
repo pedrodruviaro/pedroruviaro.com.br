@@ -20,7 +20,7 @@
         <nav class="flex gap-4 items-center">
           <NuxtLink to="/" class="link">Início</NuxtLink>
           <NuxtLink to="/notes" class="link">Notas</NuxtLink>
-          <!-- <NuxtLink to="/projects" class="link">Projetos</NuxtLink> -->
+          <NuxtLink to="/projects" class="link">Projetos</NuxtLink>
         </nav>
       </div>
     </div>
@@ -29,6 +29,10 @@
 
 <style scoped>
 .link {
-  @apply font-extrabold lg:text-lg hover:underline hover:decoration-2 hover:underline-offset-4 hover:decoration-brand-500  focus:underline focus:decoration-2 focus:underline-offset-4 focus:decoration-brand-500  focus:outline-none focus:border-none;
+  @apply font-extrabold lg:text-lg hover:opacity-75 focus:opacity-75;
+}
+
+.router-link-active {
+  @apply underline decoration-2 underline-offset-4 decoration-brand-500;
 }
 </style>
