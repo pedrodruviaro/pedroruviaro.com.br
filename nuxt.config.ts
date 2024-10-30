@@ -25,4 +25,7 @@ export default defineNuxtConfig({
     strictNuxtContentPaths: true,
   },
   extends: "@nuxt-themes/typography",
+  app: {
+    pageTransition: { name: "page", mode: "out-in" },
+  },
 })
