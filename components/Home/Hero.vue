@@ -17,27 +17,24 @@
     </h1>
     <p class="font-medium">
       Desenvolvedor front-end apaixonado por tecnologia e aprendizado contínuo,
-      com foco no desenvolvimento front-end e estudo constante em back-end.
-      Tenho experiência em HTML, CSS, JavaScript, Vue e Nuxt, e estou buscando
-      abranger todo o ecossistema JavaScript e TypeScript. Atualmente, estudo
-      também tecnologias de back-end, como Node.js e Fastify.
+      com foco no desenvolvimento front-end e, mais recentemente, back-end.
+      Tenho experiência em HTML, CSS, TypeScript, Vue e Nuxt, e estou buscando
+      abranger todo o ecossistema JavaScript e TypeScript. Atualmente, busco
+      vagas na posição de front end júnior/pleno.
     </p>
 
     <p class="font-medium mt-2">
       Iniciei minha jornada em 2021, migrando da área de Química, e desde então
-      tenho me aprofundado cada vez mais no universo da tecnologia. Gosto de
-      estudar, ensinar e aprender coisas novas. Apesar de atuar integralmente
-      com front-end, atualmente estudo Python e Go nas horas vagas. Em 2024,
-      fundei a
+      tenho me aprofundado cada vez mais no universo do desenvolvimento. Gosto
+      de estudar, ensinar e aprender coisas novas. Em 2024, comecei o projeto
       <NuxtLink
         class="border-b inline-block border-dashed hover:opacity-80"
         target="_blank"
         rel="nofollow"
         href="https://www.wire.art.br/"
         >wire</NuxtLink
-      >
-      junto com uma amiga, onde oferecemos serviços de desenvolvimento, design e
-      consultoria de SEO para empresas e pessoas físicas.
+      >, onde oferecemos serviços de desenvolvimento, design, e consultoria de
+      marketing e SEO para empresas e pessoas físicas.
     </p>
 
     <p class="font-medium mt-2">

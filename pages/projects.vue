@@ -52,5 +52,20 @@ const projects = [
         :live-url="project.liveUrl"
       />
     </section>
+
+    <section class="mt-10 lg:mt-16">
+      <p class="text-center text-balance">
+        Quer conhecer outros projetos em que participei?
+      </p>
+      <p class="text-center text-balance">
+        <NuxtLink
+          target="_blank"
+          rel="nofollow"
+          href="https://www.linkedin.com/in/pedroruviaro/"
+          class="border-b inline-block border-dashed hover:opacity-80"
+          >Entre em contato comigo e vamos conversar!
+        </NuxtLink>
+      </p>
+    </section>
   </div>
 </template>
