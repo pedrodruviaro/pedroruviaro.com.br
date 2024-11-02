@@ -11,6 +11,9 @@ const { data: notes } = await useAsyncData("home-notes", () =>
 
 <template>
   <section>
+    <h2 class="font-bold text-2xl lg:text-3xl mb-10 lg:mb-16">
+      Compartilhando de tudo um pouco
+    </h2>
     <PostsList>
       <PostsCard
         v-for="note in notes"
