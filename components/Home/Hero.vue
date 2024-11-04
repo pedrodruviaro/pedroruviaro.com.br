@@ -19,8 +19,7 @@
       Desenvolvedor front-end apaixonado por tecnologia e aprendizado contínuo,
       com foco no desenvolvimento front-end e, mais recentemente, back-end.
       Tenho experiência em HTML, CSS, TypeScript, Vue e Nuxt, e estou buscando
-      abranger todo o ecossistema JavaScript e TypeScript. Atualmente, busco
-      vagas na posição de front end júnior/pleno.
+      abranger todo o ecossistema JavaScript e TypeScript.
     </p>
 
     <p class="font-medium mt-2">
