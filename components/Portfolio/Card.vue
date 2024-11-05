@@ -4,7 +4,7 @@ const props = defineProps<{
   description: string
   image: string
   tags: string[]
-  githubUrl: string
+  githubUrl?: string
   liveUrl: string
 }>()
 </script>
@@ -32,8 +32,15 @@ const props = defineProps<{
     </div>
 
     <!-- Footer -->
-    <div class="flex items-center gap-2 justify-between flex-wrap">
+    <div
+      class="flex items-center gap-2 flex-wrap"
+      :class="{
+        'justify-end': !props.githubUrl,
+        'justify-between': props.githubUrl,
+      }"
+    >
       <NuxtLink
+        v-if="props.githubUrl"
         :href="props.githubUrl"
         target="_blank"
         rel="nofollow"
