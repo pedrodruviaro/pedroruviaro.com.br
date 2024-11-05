@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import { projects } from "~/constants/projects"
+
+useSeoMeta({
+  title: "Projetos",
+  description: "Confira alguns dos projetos que realizei ao longo desse tempo",
+})
 </script>
 
 <template>
