@@ -6,6 +6,8 @@ import brainstack from "@/assets/images/portfolio/brainstack.webp"
 import codeAndCoffee from "@/assets/images/portfolio/code-and-coffee.webp"
 // @ts-ignore
 import wire from "@/assets/images/portfolio/wire.webp"
+// @ts-ignore
+import sharemyhook from "@/assets/images/portfolio/sharemyhook.webp"
 
 type Project = {
   title: string
@@ -17,6 +19,15 @@ type Project = {
 }
 
 export const projects: Project[] = [
+  {
+    title: "shareMyHook",
+    description:
+      "Plataforma de compartilhamento de código. Criação de perfil público, códidos públicos e privados e mais.",
+    image: sharemyhook,
+    tags: ["Nuxt", "Supabase", "TypeScript", "NuxtUI"],
+    githubUrl: "https://github.com/pedrodruviaro/share-my-hook",
+    liveUrl: "https://sharemyhook.pedroruviaro.com.br/",
+  },
   {
     title: "Flashify",
     description:
