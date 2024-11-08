@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/robots",
     "@nuxtjs/sitemap",
     "@nuxt/content",
+    "@vueuse/nuxt",
   ],
   css: ["~/assets/css/main.css"],
   googleFonts: {
