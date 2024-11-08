@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     title: "shareMyHook",
     description:
-      "Plataforma de compartilhamento de código. Criação de perfil público, códidos públicos e privados e mais.",
+      "Plataforma de compartilhamento de hooks. Criação de perfil público e códigos públicos e privados. O conceito é semelhante ao gists, do GitHub.",
     image: sharemyhook,
     tags: ["Nuxt", "Supabase", "TypeScript", "NuxtUI"],
     githubUrl: "https://github.com/pedrodruviaro/share-my-hook",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     title: "Flashify",
     description:
-      "Aplicação de Flashcards, onde podemos criar de decks e praticar o conteúdo criado.",
+      "Aplicação de Flashcards, o usuário pode decks e praticar o conteúdo em estilo de jogo.",
     image: flashify,
     tags: ["Nuxt", "Supabase", "TypeScript", "NuxtUI"],
     githubUrl: "https://github.com/pedrodruviaro/flashify",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
   {
     title: "wire",
     description:
-      "Site da wire, feito com Nuxt e com animações em GSAP e SCSS em todas as seções",
+      "Site da wire, feito com Nuxt e com animações em GSAP e SCSS em todas as seções.",
     image: wire,
     tags: ["Nuxt", "GSAP", "SCSS", "TypeScript"],
     liveUrl: "https://www.wire.art.br/",
@@ -48,7 +48,7 @@ export const projects: Project[] = [
   {
     title: "BrainStack",
     description:
-      "Crie e compartilhe as ideias. Surgiu para pessoas compartilharem ideias de coisas (ou projetos) para criar.",
+      "Crie e compartilhe suas ideias. Surgiu para pessoas compartilharem ideias de coisas (ou projetos) para criar.",
     image: brainstack,
     tags: ["Nuxt", "Supabase", "TypeScript", "PrimeVue"],
     githubUrl: "https://github.com/pedrodruviaro/brain-stack",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
   {
     title: "CodeAndCoffee",
     description:
-      "Um blog utilizando headless CMS. A ideia surgiu de uma postagem desse layout behance (créditos no README).",
+      "Um blog utilizando headless CMS. A ideia surgiu de uma postagem desse layout no Behance (créditos no README).",
     image: codeAndCoffee,
     tags: ["Nuxt", "HygraphCMS", "GraphQL", "TypeScript"],
     githubUrl: "https://github.com/pedrodruviaro/code-and-coffee-blog-nuxt",
