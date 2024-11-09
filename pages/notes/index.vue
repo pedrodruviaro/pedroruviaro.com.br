@@ -83,7 +83,7 @@ watch(
 
     <p v-else>Sem posts por aqui</p>
 
-    <div class="flex items-center gap-2 mt-10">
+    <div class="flex items-center justify-end gap-2 mt-10">
       <button
         v-for="index in numOfPages"
         :key="index"

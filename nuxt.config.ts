@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
   ],
-  css: ["~/assets/css/main.css"],
   googleFonts: {
     base64: true,
     fontsDir: "/assets/fonts",
