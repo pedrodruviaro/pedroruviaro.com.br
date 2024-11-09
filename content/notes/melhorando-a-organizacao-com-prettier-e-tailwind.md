@@ -15,6 +15,6 @@ Para configurar, basta instalar o plugin e incluir o plugin no arquivo de config
 
 Já me perdi muito em arquivos _SASS_ gigantes com inúmeros agrupamentos de tags, então pra mim, qualquer ferramenta que auxilia na organização é muito bem vinda.
 
-[Documentação](https://github.com/tailwindlabs/prettier-plugin-tailwindcss?tab=readme-ov-file):
+[Documentação do plugin](https://github.com/tailwindlabs/prettier-plugin-tailwindcss?tab=readme-ov-file)
 
 [Artigo de referência](https://tailwindcss.com/blog/automatic-class-sorting-with-prettier)
