@@ -24,8 +24,12 @@ export default defineNuxtConfig({
   sitemap: {
     strictNuxtContentPaths: true,
   },
-  extends: "@nuxt-themes/typography",
   app: {
     pageTransition: { name: "page", mode: "out-in" },
+  },
+  content: {
+    highlight: {
+      theme: "dracula",
+    },
   },
 })
