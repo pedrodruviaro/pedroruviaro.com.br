@@ -88,7 +88,7 @@ watch(
         v-for="index in numOfPages"
         :key="index"
         class="p-2 w-10 border border-zinc-800 rounded-md text-sm grid place-items-center aspect-square hover:opacity-80 transition-all"
-        :class="{ 'bg-zinc-950': currentPage === index }"
+        :class="{ 'bg-zinc-900': currentPage === index }"
         @click="() => router.push({ query: { page: index } })"
       >
         {{ index }}
