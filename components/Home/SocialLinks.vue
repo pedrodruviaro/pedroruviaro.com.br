@@ -35,21 +35,22 @@ const links = [
   <section>
     <ul class="flex gap-4 items-center">
       <li v-for="link in links" :key="link.href">
-        <NuxtLink
-          :aria-label="link.label"
-          :href="link.href"
-          :target="link.target"
-          :rel="link.rel"
-          class="opacity-75 hover:opacity-50"
-        >
-          <img
-            :src="`/images/${link.iconPath}`"
-            alt=""
-            aria-hidden="true"
-            width="30"
-            height="30"
-          />
-        </NuxtLink>
+        <BaseTooltip :text="link.label">
+          <NuxtLink
+            :aria-label="link.label"
+            :href="link.href"
+            :target="link.target"
+            :rel="link.rel"
+            class="opacity-75 hover:opacity-50"
+          >
+            <img
+              :src="`/images/${link.iconPath}`"
+              alt=""
+              aria-hidden="true"
+              width="30"
+              height="30"
+            /> </NuxtLink
+        ></BaseTooltip>
       </li>
     </ul>
   </section>
