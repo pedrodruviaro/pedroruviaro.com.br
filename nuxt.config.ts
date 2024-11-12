@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@vueuse/nuxt",
+    "@zadigetvoltaire/nuxt-gtm",
   ],
   googleFonts: {
     base64: true,
@@ -31,5 +32,9 @@ export default defineNuxtConfig({
     highlight: {
       theme: "dracula",
     },
+  },
+  gtm: {
+    id: "GTM-KMZTKMNX",
+    defer: true,
   },
 })
