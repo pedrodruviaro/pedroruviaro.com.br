@@ -3,7 +3,9 @@
 <template>
   <BaseContainer as="header" class="mt-6 pb-4 border-b border-zinc-600">
     <div>
-      <div class="flex gap-4 flex-wrap justify-between items-center">
+      <div
+        class="flex gap-4 flex-col justify-between items-center [@media(min-width:500px)]:flex-row"
+      >
         <div>
           <NuxtLink to="/">
             <div>
