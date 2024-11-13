@@ -8,10 +8,10 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <BaseContainer size="lg">
     <PortfolioHeadline class="mb-10 lg:mb-16" />
 
-    <section class="grid gap-6 md:grid-cols-2">
+    <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <PortfolioCard
         v-for="project in projects"
         :key="project.title"
@@ -36,5 +36,5 @@ useSeoMeta({
         </NuxtLink>
       </p>
     </section>
-  </div>
+  </BaseContainer>
 </template>

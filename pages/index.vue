@@ -8,9 +8,9 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <BaseContainer>
     <HomeHero />
     <HomeSocialLinks class="mt-6" />
     <HomeLatestPosts class="mt-10 lg:mt-20" />
-  </div>
+  </BaseContainer>
 </template>

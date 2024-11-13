@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header class="mt-6 pb-4 border-b border-zinc-600">
+  <BaseContainer as="header" class="mt-6 pb-4 border-b border-zinc-600">
     <div>
       <div class="flex gap-4 flex-wrap justify-between items-center">
         <div>
@@ -24,7 +24,7 @@
         </nav>
       </div>
     </div>
-  </header>
+  </BaseContainer>
 </template>
 
 <style scoped>

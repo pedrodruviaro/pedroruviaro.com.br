@@ -3,7 +3,7 @@ const currentYear = computed(() => new Date().getFullYear())
 </script>
 
 <template>
-  <footer class="mt-6 py-6 border-t border-zinc-700">
+  <BaseContainer as="footer" class="mt-6 py-6 border-t border-zinc-700">
     <div variant="dark">
       <div class="flex gap-2 flex-wrap items-center justify-between">
         <p class="font-bold">pedroruviaro.com.br</p>
@@ -12,5 +12,5 @@ const currentYear = computed(() => new Date().getFullYear())
         </p>
       </div>
     </div>
-  </footer>
+  </BaseContainer>
 </template>
