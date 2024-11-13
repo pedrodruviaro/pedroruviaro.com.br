@@ -9,14 +9,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
   ],
-  googleFonts: {
-    base64: true,
-    fontsDir: "/assets/fonts",
-    overwriting: true,
-    families: {
-      Raleway: [300, 400, 500, 600, 700, 800],
-    },
-  },
   site: {
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor Front-End",
@@ -29,7 +21,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "dracula",
+      theme: "min-dark",
     },
   },
 })

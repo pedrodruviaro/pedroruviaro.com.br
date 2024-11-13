@@ -22,7 +22,6 @@ useHead({
 <style>
 html,
 body {
-  font-family: "Raleway", sans-serif;
   @apply bg-zinc-950 text-zinc-300 scroll-smooth;
 }
 

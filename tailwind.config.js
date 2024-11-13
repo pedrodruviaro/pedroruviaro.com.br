@@ -2,9 +2,6 @@
 module.exports = {
   theme: {
     extend: {
-      fontFamily: {
-        main: ["Raleway", "sans-serif"],
-      },
       colors: {
         brand: {
           100: "#ffffff",
