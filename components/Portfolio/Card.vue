@@ -11,10 +11,10 @@ const props = defineProps<{
 
 <template>
   <article
-    class="border border-zinc-600 p-4 rounded-xl grid grid-rows-[max-content_1fr_max-content] gap-6"
+    class="border border-zinc-600 rounded grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
   >
     <!-- Image -->
-    <div class="rounded-lg overflow-hidden bg-white">
+    <div class="overflow-hidden bg-white max-h-[310px]">
       <img
         :src="props.image"
         :alt="title"
@@ -26,7 +26,7 @@ const props = defineProps<{
     </div>
 
     <!-- Content -->
-    <div>
+    <div class="p-4">
       <h2 class="mb-2 font-bold text-xl lg:text-2xl">
         {{ props.title }}
       </h2>
@@ -40,7 +40,7 @@ const props = defineProps<{
 
     <!-- Footer -->
     <div
-      class="flex items-center gap-2 flex-wrap"
+      class="flex items-center gap-2 flex-wrap p-4"
       :class="{
         'justify-end': !props.githubUrl,
         'justify-between': props.githubUrl,
@@ -80,7 +80,7 @@ const props = defineProps<{
             height="20"
           />
         </div>
-        <span>Live Demo</span>
+        <span>Live</span>
       </NuxtLink>
     </div>
   </article>
