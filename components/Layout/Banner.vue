@@ -6,6 +6,7 @@
     href="https://www.wire.art.br/"
     target="_blank"
     rel="noreferrer"
+    aria-label="Conheça a wire e transforme sua presença digital"
     id="banner"
     class="block py-2.5"
   >
@@ -18,10 +19,11 @@
 
       <div class="max-w-14">
         <img
-          src="https://www.wire.art.br/_vercel/image?url=%2Flogo-white.svg&w=320&q=100"
+          src="/images/wire.svg"
           alt="wire"
-          width="320"
-          height="100"
+          aria-hidden="true"
+          width="50"
+          height="15"
         />
       </div>
     </BaseContainer>
