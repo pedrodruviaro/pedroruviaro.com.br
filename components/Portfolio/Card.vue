@@ -15,7 +15,14 @@ const props = defineProps<{
   >
     <!-- Image -->
     <div class="rounded-lg overflow-hidden bg-white">
-      <img :src="props.image" alt="" aria-hidden="true" />
+      <img
+        :src="props.image"
+        :alt="title"
+        width="499"
+        height="312"
+        aria-hidden="true"
+        class="w-full h-full object-cover"
+      />
     </div>
 
     <!-- Content -->
