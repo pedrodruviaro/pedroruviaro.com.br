@@ -8,6 +8,8 @@ import codeAndCoffee from "@/assets/images/portfolio/code-and-coffee.webp"
 import wire from "@/assets/images/portfolio/wire.webp"
 // @ts-ignore
 import sharemyhook from "@/assets/images/portfolio/sharemyhook.webp"
+// @ts-ignore
+import notr from "@/assets/images/portfolio/notr.webp"
 
 type Project = {
   title: string
@@ -44,6 +46,15 @@ export const projects: Project[] = [
     image: wire,
     tags: ["Nuxt", "GSAP", "SCSS", "TypeScript"],
     liveUrl: "https://www.wire.art.br/",
+  },
+  {
+    title: "Not.r",
+    description:
+      "Um app de notas com LocalStorage e Pinia para gerenciamento de estado. Simples, direto e intuitivo.",
+    image: notr,
+    tags: ["Vue", "TypeScript", "TailwindCSS", "LocalStorage", "Pinia"],
+    githubUrl: "https://github.com/pedrodruviaro/notr",
+    liveUrl: "https://notr.pedroruviaro.com.br/",
   },
   {
     title: "BrainStack",
