@@ -28,11 +28,11 @@ body {
 
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.3s;
+  transition: all 0.225s;
 }
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  filter: blur(0.65rem);
+  filter: blur(0.5rem);
 }
 </style>
