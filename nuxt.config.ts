@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@vueuse/nuxt",
+    "@nuxt/scripts",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",

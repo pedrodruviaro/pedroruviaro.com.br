@@ -7,6 +7,25 @@ useHead({
     return chunk ? `${chunk} - pedroruviaro` : "pedroruviaro"
   },
 })
+
+declare global {
+  interface Window {
+    cronitor?: any
+  }
+}
+
+useScript("https://rum.cronitor.io/script.js")
+
+onMounted(() => {
+  window.cronitor =
+    window.cronitor ||
+    function () {
+      ;(window.cronitor.q = window.cronitor.q || []).push(arguments)
+    }
+
+  //@ts-ignore
+  cronitor("config", { clientKey: "2c7f65d1581b7c10d8715205e8601209" })
+})
 </script>
 
 <template>
