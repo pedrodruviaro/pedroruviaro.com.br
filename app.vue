@@ -8,12 +8,6 @@ useHead({
   },
 })
 
-declare global {
-  interface Window {
-    cronitor?: any
-  }
-}
-
 useScript("https://rum.cronitor.io/script.js")
 
 onMounted(() => {
