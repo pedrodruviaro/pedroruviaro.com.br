@@ -45,10 +45,3 @@ const formatDate = (date: string) => {
     <h3 class="font-semibold text-lg lg:text-xl">{{ props.title }}</h3>
   </NuxtLink>
 </template>
-
-<style scoped>
-.article:last-child {
-  border: none !important;
-  padding-bottom: 0;
-}
-</style>
