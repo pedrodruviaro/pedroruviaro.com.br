@@ -2,9 +2,8 @@
 
 <template>
   <section class="flex flex-col gap-3 [@media(min-width:900px)]:text-center">
-    <h2 class="font-bold text-2xl md:text-3xl lg:text-4xl">
-      Portfólio de projetos
-    </h2>
+    <BaseTitle as="h1" size="lg" label="Portfólio de projetos" />
+
     <p class="text-balance md:text-lg">Um pouco do que eu ando fazendo</p>
   </section>
 </template>
