@@ -35,7 +35,7 @@ onMounted(() => {
 <style>
 html,
 body {
-  @apply bg-zinc-950 text-zinc-300 scroll-smooth;
+  @apply bg-zinc-950 text-zinc-300 scroll-smooth overflow-x-hidden;
 }
 
 .page-enter-active,
