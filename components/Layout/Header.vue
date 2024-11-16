@@ -1,18 +1,5 @@
 <script setup lang="ts">
-const links = [
-  {
-    label: "Início",
-    to: "/",
-  },
-  {
-    label: "Notas",
-    to: "/notes",
-  },
-  {
-    label: "Projetos",
-    to: "/projects",
-  },
-]
+import { menuLinks } from "~/constants/menuLinks"
 
 const isMenuOpen = ref(false)
 const handleCloseMenu = () => (isMenuOpen.value = false)
@@ -73,7 +60,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
             ref="menuRef"
           >
             <NuxtLink
-              v-for="link in links"
+              v-for="link in menuLinks"
               :key="link.to"
               :to="link.to"
               @click="handleCloseMenu"
