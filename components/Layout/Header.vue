@@ -56,7 +56,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
         <Transition>
           <nav
             v-show="isMenuOpen || isLargeScreen"
-            class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-zinc-950 [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1"
+            class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-zinc-950 [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1 [@media(min-width:900px)]:gap-4"
             ref="menuRef"
           >
             <NuxtLink

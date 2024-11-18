@@ -15,13 +15,6 @@ const links = [
     rel: "nofollow",
   },
   {
-    label: "Codepen",
-    iconPath: "codepen-logo.svg",
-    href: "https://codepen.io/pedrodruviaro/",
-    target: "_blank",
-    rel: "nofollow",
-  },
-  {
     label: "Email",
     iconPath: "email-logo.svg",
     href: "mailto:pedrodruviaro@gmail.com",

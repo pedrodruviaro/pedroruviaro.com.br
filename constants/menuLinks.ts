@@ -4,6 +4,10 @@ export const menuLinks = [
     to: "/",
   },
   {
+    label: "Sobre",
+    to: "/about",
+  },
+  {
     label: "Notas",
     to: "/notes",
   },

@@ -10,7 +10,7 @@ useSeoMeta({
 <template>
   <BaseContainer>
     <HomeHero />
-    <HomeSocialLinks class="mt-6" />
+    <LayoutSocialLinks class="mt-10" />
     <HomeLatestPosts class="mt-10 lg:mt-20" />
   </BaseContainer>
 </template>
