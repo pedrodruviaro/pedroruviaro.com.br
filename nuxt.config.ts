@@ -9,6 +9,13 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/scripts",
   ],
+  routeRules: {
+    "/": { swr: 1800 },
+    "/notes": { swr: 1800 },
+    "/notes/**": { swr: 1800 },
+    "/projects": { prerender: true },
+    "/about": { prerender: true },
+  },
   site: {
     url: "https://pedroruviaro.com.br/",
     name: "pedroruviaro - Desenvolvedor Front-End",
