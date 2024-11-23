@@ -7,7 +7,7 @@ tag: "vue"
 
 # Simplificando Fallthrough Attributes no Vue
 
-No **Vue**, Um `fallthrough attribute` é um atributo que é passado para um componente, mas não é explicitamente declarado nas props do componente que recebe. Alguns exemplos são atributos como _class_, _style_ e _id_.
+No **Vue**, um `fallthrough attribute` é um atributo que é passado para um componente, mas não é explicitamente declarado nas props de quem recebe. Alguns exemplos são atributos como _class_, _style_ e _id_.
 
 Quando um componente possui um único elemento na raiz, os atributos são automaticamente aplicados ao elemento. Por exemplo, considerando um componente `<Paragraph>` com o seguinte template:
 
@@ -70,6 +70,6 @@ Para ficar mais fácil de entender, veja o esquema abaixo:
 
 ![attrs](/images/notes/v-bind-attrs.png)
 
-Com essa estratégia, podemos ter componentes mais flexíveis e menos sucetíveis a erros, além de evitarmos a adição de elementos no _DOM_ só para satisfazer o compilador do Vue.
+Com essa estratégia, podemos ter componentes mais flexíveis e menos suscetíveis a erros, além de evitarmos a adição de elementos no _DOM_ só para satisfazer o compilador do Vue.
 
 Confira mais na [documentação oficial.](https://vuejs.org/guide/components/attrs#attribute-inheritance-on-multiple-root-nodes)
