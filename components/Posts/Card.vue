@@ -1,34 +1,13 @@
 <script setup lang="ts">
+import { formatDate } from "~/utils/post/formatDate"
+
 const props = defineProps<{
   path: string
   title: string
   date: string
   tag: string
+  description?: string
 }>()
-
-const months = [
-  "jan",
-  "fev",
-  "mar",
-  "abr",
-  "mai",
-  "jun",
-  "jul",
-  "ago",
-  "set",
-  "out",
-  "nov",
-  "dez",
-]
-
-const formatDate = (date: string) => {
-  // 2024-10-20
-  const split = date.split("-")
-  const monthIdx = Number(split[1]) - 1
-  const month = months[monthIdx]
-
-  return `${split[2]} ${month} ${split[0]}`
-}
 </script>
 
 <template>
@@ -43,6 +22,7 @@ const formatDate = (date: string) => {
       </p>
     </div>
     <h3 class="font-semibold text-lg lg:text-xl">{{ props.title }}</h3>
+    <p v-if="props.description" class="mt-2 text-sm">{{ props.description }}</p>
   </NuxtLink>
 </template>
 
