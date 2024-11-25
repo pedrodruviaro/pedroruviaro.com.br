@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "min-dark",
+      theme: "dracula",
     },
   },
 })
