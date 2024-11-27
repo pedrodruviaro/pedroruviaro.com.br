@@ -255,3 +255,23 @@ public static function find(int $id): array {
 ```
 
 - o erro de `abort` é capturado pelo laravel e uma tela de erro é exibida com o código de erro
+
+## 08 Introduction to Migrations
+
+> $ php artisan -> lista os comandos disponíveis
+
+- DB GUI -> https://tableplus.com/
+
+- Migrations -> ações que queremos fazer no banco de dados
+
+  - é uma forma de estruturada e controlada de gerenciar alterações no esquema de um banco de dados ao longo do tempo.
+
+- Criando uma Migration
+
+  - $ php artisan make:migration
+
+  - para rodar a nova migration
+
+  - $ php artisan migrate
+
+## 09 -
