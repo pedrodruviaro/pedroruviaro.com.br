@@ -274,4 +274,188 @@ public static function find(int $id): array {
 
   - $ php artisan migrate
 
-## 09 -
+## 09 - Meet Eloquent
+
+- Um dos pilares do Laravel
+
+- ORM -> Object Relational Mapper
+
+- $ php artisan tinker
+  - playground onde podemos trabalhar com o modelo
+    - $ App\Models\Job::create(['title' => 'Acme Director', 'salary' => '$ 100000000'])
+
+```php
+use Illuminate\Database\Eloquent\Model;
+
+class Job extends Model {
+    protected $table = 'job_listings';
+    protected $fillable = ['title', 'salary'];
+};
+```
+
+- `Job::all()` -> Retorna todos os jobs
+- `Job::find($id)` -> Retorna o objeto com mesmo ID
+
+- $ php artisan make:model Post -m
+  - cria o modelo e a migration
+
+## 10 - Model Factories
+
+- Usados para gerar dados
+
+- Dentro do modelo, usar `use HasFactory;`
+
+- Utiliza o `faker` por baixo dos panos
+
+- $ php artisan make:factory Job
+
+- definindo a factory de Job
+
+```php
+public function definition(): array
+{
+    return [
+        'title' => fake()->jobTitle(),
+        'salary' => '$ 50,000 USD'
+    ];
+}
+```
+
+- Podemos criar relações dentro das Factories
+
+```php
+public function definition(): array
+{
+    return [
+        'title' => fake()->jobTitle(),
+        'employer_id' => Employer::factory(),
+        'salary' => '$ 50,000 USD'
+    ];
+}
+```
+
+- Dessa forma, sempre que criamos um Job, criaremos um Employer e relacionaremos o `ID` com o `employer_id`. Isso acontece pois na migration definimos a relação:
+
+  ```php
+  Schema::create('job_listings', function (Blueprint $table) {
+      $table->id();
+      // $table->unsignedBigInteger('employer_id');
+      $table->foreignIdFor(App\Models\Employer::class);
+      $table->string('title');
+      $table->string('salary');
+      $table->timestamps();
+  });
+  ```
+
+## 11 - Two Key Eloquent Relationship Types
+
+- relações `belongsTo` e `hasMany`
+
+- um Job pertence a um Employer, portanto a relação é criada assim:
+
+```php
+class Job extends Model {
+    use HasFactory;
+
+    protected $table = 'job_listings';
+    protected $fillable = ['title', 'salary'];
+
+    public function employer() {
+        return $this->belongsTo(Employer::class);
+    }
+};
+```
+
+- Assim, podemos acessar `$job->employer` e obter os dados do modelo Employer
+
+- Um Employer tem muitos Jobs
+
+```php
+class Employer extends Model
+{
+    use HasFactory;
+
+    public function jobs() {
+        return $this->hasMany(Job::class);
+    }
+}
+```
+
+- O acesso ocorre da mesma forma anterior: `$employer->jobs`. Podemos acessar com `jobs[0]` ou com métodos específicos, como `jobs->first()`
+
+### Exercício -> criando uma relação entre posts e comentários
+
+```php
+    Schema::create('comments', function (Blueprint $table) {
+        $table->id();
+        $table->string('comment');
+        $table->foreignIdFor(App\Models\Post::class)->constrained()->cascadeOnDelete();
+        $table->timestamps();
+    });
+```
+
+- Habilito no modelo Comment a relação
+
+```php
+public function post() {
+    return $this->belongsTo(Post::class);
+}
+```
+
+- Faço o factory com Post::factory()
+
+```php
+public function definition(): array
+{
+    return [
+        'comment' => fake()->text(),
+        'post_id' => Post::factory(),
+    ];
+}
+```
+
+## 12 - Pivot Tables and BelongsToMany Relationships
+
+- Pivot table => tabela contendo a relação entre outros dados, como `tag_id` e `job_listing_id`
+
+- constrains on sqlite (comando SQL) -> `PRAGMA foreign_keys=on;`
+
+- Nesse caso, criamos a pivot table dentro da mesma migration de tags
+
+```php
+    Schema::create('job_tag', function (Blueprint $table) {
+        $table->id();
+        $table->foreignIdFor(\App\Models\Job::class, 'job_listing_id')->constrained()->cascadeOnDelete();
+        $table->foreignIdFor(\App\Models\Tag::class)->constrained()->cascadeOnDelete();
+        $table->timestamps();
+    });
+```
+
+- E colocamos também na função `down()`
+
+```php
+public function down(): void
+{
+    Schema::dropIfExists('tags');
+    Schema::dropIfExists('job_tag');
+
+}
+```
+
+- Uma `Tag` pertence a vários Jobs
+
+```php
+public function jobs() {
+    return $this->belongsToMany(Job::class, relatedPivotKey: "job_listing_id");
+}
+```
+
+- E um Job pertence a várias Tags
+
+```php
+public function tags() {
+    return $this->belongsToMany(Tag::class, foreignPivotKey: "job_listing_id");
+}
+```
+
+- Se um Job ou uma Tag for apagada, o registro na pivot table também é removido
