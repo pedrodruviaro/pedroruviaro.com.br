@@ -459,3 +459,153 @@ public function tags() {
 ```
 
 - Se um Job ou uma Tag for apagada, o registro na pivot table também é removido
+
+## 13 - Eager Loading and the N+1 Problem
+
+- N + 1 -> queries SQL sendo performadas dentro de loops
+
+```php
+@foreach ($jobs as $job)
+    <a href="/jobs/{{ $job['id'] }}" class="block px-4 py-6 border rounded-lg border-gray-200">
+        <div class="font-bold text-blue-500 text-sm mb-2">
+            {{ $job->employer->name }}
+        </div>
+        <div>
+            <strong>{{ $job['title'] }}:</strong> Pays {{ $job['salary'] }} per year!
+        </div>
+    </a>
+@endforeach
+```
+
+- `{{ $job->employer->name }}` faz uma referência e executa uma query a cada iteração
+
+- Resolvendo isso com **eager loading**
+
+```php
+$jobs = Job::with('employer')->get();
+```
+
+- Dessa forma a query é feita antes da renderização da rota
+
+## 14 - All You Need to Know About Pagination
+
+- Paginação é algo simples (até demais) no Laravel
+
+- Simplesmente acessamos o método **paginate(LIMIT)** na rota
+
+```php
+Route::get('/jobs', function () {
+    $jobs = Job::with('employer')->paginate(10);
+    // $jobs = Job::with('employer')->simplePaginate(5);
+    // $jobs = Job::with('employer')->cursorPaginate(5);
+
+    return view('jobs', [
+        'jobs' =>  $jobs
+    ]);
+});
+```
+
+    - Cursor based -> usado em infite scrolling, por exemplo e bases maiores de dados
+
+- Para mostrar os links em tela, simplesmente chamamos:
+
+```php
+<div>
+    {{ $jobs->links() }}
+</div>
+```
+
+- Para modificar o estilo e HTML da paginação, baixamos os arquivos via `artisan`, selecionando `laravel-pagination`
+
+- $ php artisan vendor:publish
+
+- Com isso, o arquivo blade é baixado na pasta `vendor`
+
+- No arquivo de configuração `AppServiceProvider.php` podemos selecionar o provedor com `Paginator::useTailwind();`
+
+- Adicionando `order` por **data de criação**:
+
+```php
+$jobs = Job::with('employer')->latest()->paginate(5);
+```
+
+## 15 - Understanding Database Seeders
+
+- Podemos rodar as migrations com `fresh` em conjunto com `seed`
+
+- $ php artisan migrate:fresh --seed
+
+- Os seeders defaults ficam em `seeders/DatabaseSeeder.php`
+
+  - Definimos igual ao comando no CLI -> `Job::factory(200)->create();`
+
+- Se necessário, podemos criar novos seeders e separar as responsabilidades
+
+  - $ php artisan make:seed
+
+  - Agora, basta referenciar com `$this->call(JobSeeder::class);` no arquivo `DatabaseSeeder.php`
+
+## 16 - Forms and CSRF Explained (with Examples)
+
+- CSRF = Cross-Site Request Forgery
+
+- Para prevenir isso, precisamos colocar a diretiva do blade `@csrf` dentro de **todo form criado**
+
+  - Assim, o Laravel lê o token e faz a comparação automaticamente
+
+- Os valores são pegos pelo `name` do campo
+
+- Podemos criar o modelo com base no método `request()`. `request()->all()` pega tudo.
+
+```php
+Route::post('/jobs', function () {
+    // validation
+
+    Job::create([
+        'title' => request('title'),
+        'salary' => request('salary'),
+        'employer_id' => 1
+    ]);
+
+    return redirect('/jobs');
+});
+```
+
+## 17 - Always Validate. Never Trust the User.
+
+- Validando requisições
+
+- Usamos o método `validate` presente em `request()`
+
+```php
+request()->validate([
+    'title' => ['required', 'min:3'],
+    'salary' => ['required', 'min:3']
+]);
+```
+
+- Regras de validação padrão: https://laravel.com/docs/11.x/validation#available-validation-rules
+
+  - Se a validação falhar, o Laravel automaticamente _retorna_ para a rota origem, não executando o código posterior ao método `validate()`
+
+- Para exibir a mensagem de erro no form, usamos a diretiva `@error` do blade
+
+```php
+@error('title')
+    <span class="text-red-400 text-sm">{{ $message }}</span>
+@enderror
+```
+
+- Podemos também listar todos os erros presentes (isso inclui erros além da validação) e iterar sobre
+
+```php
+<div>
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li class="text-red-400 text-sm">{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+</div>
+```
