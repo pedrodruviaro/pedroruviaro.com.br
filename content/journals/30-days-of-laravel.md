@@ -609,3 +609,158 @@ request()->validate([
     @endif
 </div>
 ```
+
+## 18 - Editing, Updating, and Deleting a Resource
+
+- Para editar um dado, validamos e fazemos o `update` ou `save` do Modelo
+
+```php
+Route::patch('/jobs/{id}', function ($id) {
+    request()->validate([
+        'title' => ['required', 'min:3'],
+        'salary' => ['required', 'min:3']
+    ]);
+
+    $job = Job::findOrFail($id); // job == null never happens
+
+    // $job->title = request("title");
+    // $job->salary = request("salary");
+    // $job->save();
+
+    $job->update([
+        'title' => request("title"),
+        'salary' => request("salary"),
+    ]);
+
+    return redirect('/jobs/' . $job->id);
+});
+```
+
+- O método `findOrFail` não retorna null. Se o dado não for encontrado, o lavarel trata o erro
+
+- Para deletar, usamos o método `delete`
+
+```php
+Route::delete('/jobs/{id}', function ($id) {
+    Job::findOrFail($id)->delete();
+
+    return redirect('/jobs');
+});
+```
+
+- Como os forms HTML só podem ter o método POST ou GET, passamos um parâmetro do blade para indicar o método da requisição dentro da tag `<form>`
+
+```php
+@method('PATCH')
+```
+
+- Como não podemos ter forms aninhados, criamos um em outro ponto do HTML e referenciamos o botão desse form com o atributo `form=""`.
+
+```php
+<button form="delete-form" type="submit" class="rounded-md">Delete</button>
+
+<form method="POST" action="/jobs/{{ $job->id }}" class="hidden" id="delete-form">
+    @csrf
+    @method('DELETE')
+</form>
+```
+
+- Em casos assim, lembrar de colocar o atributo `submit` no tipo do botão e esconder o form.
+
+## 19 - Routes Reloaded - 6 Essential Tips
+
+### Route Model Binding
+
+- O laravel busca automaticamente o Job com base na convenção:
+
+```php
+Route::get('/jobs/{job}', function (Job $job) {
+   return view('jobs.show', ['job' => $job]);
+});
+```
+
+- O wildcard deve ser do mesmo nome que o parâmetro da função e o tipo deve ser o modelo
+
+- Por padrão o Laravel busca pelo ID do dado
+  - Se precisarmos buscar por outra coluna, passamos o parâmetro com `:`
+
+```php
+Route::get('/jobs/{post:slug}', function (Post $post) {
+    return view('post.show', ['post' => $post]);
+ });
+```
+
+- Dessa forma não precisamos do `findOrFail`
+
+### Controller Classes
+
+- $ php artisan make:controller JobController
+
+  - tipo do controller -> empty
+
+- controllers ficam em app/Htpp/Controllers
+
+- definindo o controller
+
+```php
+class JobController extends Controller
+{
+    public function index()
+    {
+        $jobs = Job::with('employer')->latest()->paginate(5);
+
+        return view('jobs.index', [
+            'jobs' =>  $jobs
+        ]);
+    }
+}
+```
+
+- Usando na rota
+
+```php
+Route::get('/jobs', [JobController::class, 'index']);
+```
+
+- Parâmetros de função funcionam da mesma forma
+
+### Route::view()
+
+- Quando precisamos apenas renderizar uma view
+  - Páginas estáticas, por exemplo
+
+```php
+Route::view('/', 'home');
+
+Route::view('/contact', 'contact');
+```
+
+### List You Routes
+
+- $ php artisan route:list
+- $ php artisan route:list --except-vendor
+
+### Route Groups
+
+- Agrupando rotas com a mesma classe de controller
+
+```php
+Route::controller(JobController::class)->group(function () {
+    Route::get('/jobs', 'index');
+    Route::get('/jobs/create', 'create');
+    Route::get('/jobs/{job}', 'show');
+    Route::post('/jobs', 'store');
+    Route::get('/jobs/{job}/edit', 'edit');
+    Route::patch('/jobs/{job}', 'update');
+    Route::delete('/jobs/{job}', 'destroy');
+});
+```
+
+### Route Resources
+
+- O Laraval usa as convenções de nome do controler (index, destroy, create...) para automaticamente criar as rotas
+
+```php
+// 'jobs' -> URI
+Route::resource('jobs', JobController::class);
+```
