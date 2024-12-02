@@ -764,3 +764,121 @@ Route::controller(JobController::class)->group(function () {
 // 'jobs' -> URI
 Route::resource('jobs', JobController::class);
 ```
+
+## 20 - Starter Kits, Breeze, and Middleware
+
+- Usando o template `Breeze` como modelo de estudo
+
+## 21 - Make a Login and Registration System From Scratch: Part 1
+
+- Blade templates para estados de `auth` e `guest`
+
+```php
+@auth
+    <span>Only auth users can see!</span>
+@endauth
+
+@guest
+    <span>Only NOT auth users can see!</span>
+@endguest
+```
+
+## 22 - Make a Login and Registration System From Scratch: Part 2
+
+- Busca por um campo com mesmo nome e sufixo _\_confirmation_ para validar
+
+```php
+'password' => ['required', Password::min(6), 'confirmed'],
+```
+
+- Sempre usar um POST request para logout
+
+- Guardando o valor antigo em validações com `old('email')`;
+
+```php
+<x-form-input type="email" placeholder="johndoe@email.com" name="email" id="email"
+:value="old('email')" autofocus />
+```
+
+- Criando o usuário
+
+- Laravel faz o Hash do password pela função `casts` no modelo `User`
+
+```php
+public function store()
+{
+    $validatedAttributes = request()->validate([
+    'first_name' => ['required'],
+    'last_name' => ['required'],
+    'email' => ['required', 'email', 'max:254'],
+    'password' => ['required', Password::min(6), 'confirmed'],
+    ]);
+
+    $user = User::create($validatedAttributes);
+
+    Auth::login($user);
+
+    return redirect('/jobs');
+}
+```
+
+- Fazendo o login do usuário
+
+```php
+public function store()
+{
+    // validate
+    $attributes = request()->validate([
+        'email' => ['required', 'email', 'max:254'],
+        'password' => ['required'],
+    ]);
+
+    // attempt to login
+    if (! Auth::attempt($attributes)){ // second arg => 'remember'
+        throw ValidationException::withMessages([
+            'email' => 'Sorry, those credentials dont match'
+        ]);
+    }
+
+    // regenerate the session token
+    request()->session()->regenerate(); // always regenerate after login -> **security**
+
+    // redirect
+    return redirect('/jobs');
+}
+```
+
+- Fazendo o logout do usuário
+
+```php
+public function destroy()
+{
+    Auth::logout();
+
+    return redirect('/');
+}
+```
+
+- _Rate limits_ no form de login
+
+## 23 - 6 Steps to Authorization Mastery
+
+- Laravel Gates
+
+  - não recomendado para aplicações reais, apenas para aprendizado
+
+- Laravel Policies
+
+  - $ php artisan make:policy
+  - são vinculadas ao modelo
+
+- Diretivas `@can`
+  - Usadas para renderizar condicionalmente elementos com base em uma cláusula
+
+```php
+@can('edit', $job)
+    <p class="mt-6">
+        <x-button href="/jobs/{{ $job->id }}/edit">Edit Job</x-button>
+    </p>
+@endcan
+```
