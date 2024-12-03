@@ -882,3 +882,119 @@ public function destroy()
     </p>
 @endcan
 ```
+
+## 24 - How to Preview and Send Email Using Mailable Classes
+
+- Gerar um `mailable`
+
+  - $ php artisan make:mail
+
+- Email ficam em App\Mail
+
+- A função `content` recebe uma view
+
+- Testando o visual localmente via Routes
+
+```php
+Route::get('/test', function () {
+    return new JobPosted();
+});
+```
+
+- Enviando para um email real (localmente não vai funcionar, precisamos de um servidor SMTP)
+
+```php
+Route::get('/test', function () {
+    Mail::to('pedrodruviaro@gmail.com')->send(new JobPosted());
+
+    return 'Done';
+});
+```
+
+- Podemos verificar os logs para checar se está tudo certo
+
+- `/storage/logs/laravel.log`
+
+```
+[2024-12-03 17:13:32] local.DEBUG: From: Laravel <hello@example.com>
+To: pedrodruviaro@gmail.com
+Subject: Job Posted
+MIME-Version: 1.0
+Date: Tue, 03 Dec 2024 17:13:32 +0000
+Message-ID: <d6196463145b8f0b74dcbb8f4129bb1a@example.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Congrats! Yout job is now live on your website.
+```
+
+- A configuração do envio de emails fica em `/config/mail.php`
+
+  - As informações ficam dentro do arquivo _.env_ com o prefixo `MAIL_`
+
+- Serviço para envio de emails: https://mailtrap.io/home
+
+  - Ideal para testes
+
+- Enviando do controller
+
+```php
+// email is implicit
+Mail::to($job->employer->user)->send(new JobPosted($job));
+```
+
+- Dessa forma, dentro da classe `JobPosted` temos que passar `$job` ao constructor
+
+```php
+public function __construct(public Job $job)
+{
+    //
+}
+```
+
+- E assim, o `$job` fica disponívei na View
+
+- Pegando a url completa
+
+```php
+<p>
+    <a href="{{ url('/jobs/' . $job->id) }}">View your job listing</a>
+</p>
+```
+
+- Problema -> envio de email demora alguns segundos. A solução? `Queues`
+
+## 25 - Queues Are Easier Than You Think
+
+- A configuração fica em `/config/queues.php`
+
+- Se tratando de emails, simplesmente trocamos `send` por `queue`
+
+```php
+Mail::to($job->employer->user)->queue(new JobPosted($job));
+```
+
+- Porém, precisamos criar um _work_ para a queue funcionar
+
+  - $ php artisan queue:work
+  - Com isso, o email é enviado
+
+## 26 - Get Your Build Process in Order
+
+- Asset bundling e Vite
+
+- Trocando APP_URL dentro de .env para a url de teste:
+
+  - APP_URL=http://example.test
+
+- Assim, rodamos o `npm run dev` para servir os arquivos via vite
+
+- Dentro do layout, referenciamos os assets via:
+
+```php
+@vite('resources/css/app.css')
+@vite('resources/js/app.js')
+```
+
+- Instalando tailwind: https://tailwindcss.com/docs/guides/laravel
+  - Já vem pré instalado
