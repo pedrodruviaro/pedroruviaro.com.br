@@ -21,7 +21,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "dracula",
+      theme: "github-dark",
       langs: [
         "javascript",
         "vue",
