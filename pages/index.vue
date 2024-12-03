@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: "Início",
-  description: "Olá, eu sou o Pedro. Desenvolvedor Front End",
+  description: "Olá, eu sou o Pedro. Desenvolvedor Front-End",
   ogTitle: "Início",
-  ogDescription: "Olá, eu sou o Pedro. Desenvolvedor Front End",
+  ogDescription: "Olá, eu sou o Pedro. Desenvolvedor Front-End",
 })
 </script>
 
