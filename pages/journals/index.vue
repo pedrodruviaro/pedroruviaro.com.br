@@ -11,9 +11,7 @@ const { data: journals } = await useAsyncData("journals-query", () =>
 
 <template>
   <BaseContainer as="section">
-    <BaseTooltip text="* Today I Learned" class="mb-10 lg:mb-16">
-      <BaseTitle as="h1" size="lg" label="Meus jornais" />
-    </BaseTooltip>
+    <BaseTitle as="h1" size="lg" label="Meus jornais" class="mb-10 lg:mb-16" />
 
     <PostsList v-if="journals && journals.length > 0">
       <PostsCard
