@@ -6,9 +6,7 @@ const { data: notes } = await useAsyncData("home-notes", () =>
 
 <template>
   <section>
-    <h2 class="font-bold text-2xl lg:text-3xl mb-8">
-      O que eu ando escrevendo
-    </h2>
+    <BaseTitle size="lg" class="mb-8" label="O que eu ando escrevendo" />
 
     <PostsList>
       <PostsCard

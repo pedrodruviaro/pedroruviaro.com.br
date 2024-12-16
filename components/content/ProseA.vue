@@ -5,8 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from "vue"
-
 const props = defineProps({
   href: {
     type: String,

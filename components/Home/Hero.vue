@@ -11,10 +11,10 @@
       />
     </div>
 
-    <h1 class="text-3xl lg:text-4xl font-medium my-4">
+    <BaseTitle as="h1" size="xl" class="font-medium my-4">
       Olá, eu sou o Pedro. <br />
       <strong class="font-extrabold">Desenvolvedor Front End</strong>
-    </h1>
+    </BaseTitle>
     <div class="space-y-3">
       <p class="font-medium">
         Desenvolvedor front-end apaixonado por tecnologia e aprendizado

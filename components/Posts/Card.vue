@@ -21,7 +21,7 @@ const props = defineProps<{
         {{ formatDate(props.date) }}
       </p>
     </div>
-    <h3 class="font-semibold text-lg lg:text-xl">{{ props.title }}</h3>
+    <BaseTitle as="h3" size="sm" :bold="false" :label="props.title" />
     <p v-if="props.description" class="mt-2 text-sm">{{ props.description }}</p>
   </NuxtLink>
 </template>

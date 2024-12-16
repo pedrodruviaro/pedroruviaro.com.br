@@ -27,9 +27,9 @@ const props = defineProps<{
 
     <!-- Content -->
     <div class="p-4">
-      <h2 class="mb-2 font-bold text-xl lg:text-2xl">
+      <BaseTitle size="md" class="mb-2">
         {{ props.title }}
-      </h2>
+      </BaseTitle>
       <p class="text-sm">{{ props.description }}</p>
       <ul class="flex flex-wrap gap-1 mt-4">
         <BaseTag as="li" v-for="tag in props.tags" :key="tag">
