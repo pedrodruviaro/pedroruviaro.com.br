@@ -5,6 +5,13 @@ useSeoMeta({
   title: "Projetos",
   description: "Confira alguns dos projetos que realizei ao longo desse tempo",
 })
+
+defineOgImageComponent("NuxtSeo", {
+  title: "pedroruviaro",
+  description: "Projetos - Um pouco do que eu ando fazendo",
+  theme: "#111010",
+  colorMode: "dark",
+})
 </script>
 
 <template>

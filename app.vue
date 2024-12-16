@@ -20,13 +20,6 @@ onMounted(() => {
   //@ts-ignore
   cronitor("config", { clientKey: "2c7f65d1581b7c10d8715205e8601209" })
 })
-
-defineOgImageComponent("NuxtSeo", {
-  title: "pedroruviaro",
-  description: "Olá, eu sou o Pedro. Desenvolvedor-Front End",
-  theme: "#111010",
-  colorMode: "dark",
-})
 </script>
 
 <template>
