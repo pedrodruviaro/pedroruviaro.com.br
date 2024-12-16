@@ -23,6 +23,7 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: "dracula",
+      langs: ["vue", "html", "css", "js", "ts", "php", "blade"],
     },
   },
 })
