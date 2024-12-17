@@ -13,7 +13,9 @@
     <BaseContainer
       class="hover:opacity-70 flex items-center justify-between gap-2"
     >
-      <span class="font-semibold text-xs sm:text-sm md:text-base text-white">
+      <span
+        class="font-semibold text-xs sm:text-sm md:text-base text-brand-white"
+      >
         Conheça a wire e transforme sua presença digital
       </span>
 
@@ -32,6 +34,6 @@
 
 <style scoped>
 #banner {
-  background: linear-gradient(20deg, #ab00f49a 0, #06102d 100%);
+  background: linear-gradient(20deg, #ab00f49a 0, #0071e2 100%);
 }
 </style>

@@ -10,7 +10,7 @@ const props = withDefaults(
 <template>
   <Component
     :is="props.as"
-    class="text-xs block max-w-max text-center px-2.5 py-px bg-zinc-600 rounded-full"
+    class="text-xs block max-w-max text-center px-2.5 py-px bg-brand-black/10 rounded-full"
   >
     <slot />
   </Component>

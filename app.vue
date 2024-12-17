@@ -26,7 +26,7 @@ onMounted(() => {
   <div>
     <LayoutBanner />
     <NuxtLayout>
-      <NuxtLoadingIndicator :height="4" color="#f8f7f4" />
+      <NuxtLoadingIndicator :height="4" color="#111" />
       <NuxtPage />
     </NuxtLayout>
   </div>
@@ -35,7 +35,11 @@ onMounted(() => {
 <style>
 html,
 body {
-  @apply bg-zinc-950 text-zinc-300 scroll-smooth overflow-x-hidden;
+  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden;
+}
+
+a {
+  @apply border-brand-black/50;
 }
 
 .page-enter-active,

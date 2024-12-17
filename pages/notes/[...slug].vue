@@ -2,7 +2,7 @@
 
 <template>
   <BaseContainer as="section">
-    <div class="prose prose-invert max-w-[100%]">
+    <div class="prose max-w-[100%]">
       <ContentDoc>
         <template #not-found>
           <PostsNotFound />
