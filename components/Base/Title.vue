@@ -36,7 +36,7 @@ const sizeClasses: SizeClasses = {
 
 <template>
   <Component
-    class="font-bold text-balance text-brand-blue-dark"
+    class="font-bold text-balance text-brand-black"
     :is="props.as"
     :class="[
       { 'mx-auto text-center': props.center },

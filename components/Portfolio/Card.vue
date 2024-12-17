@@ -11,10 +11,12 @@ const props = defineProps<{
 
 <template>
   <article
-    class="border border-zinc-600 rounded grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
+    class="border bg-white border-brand-black/50 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
   >
     <!-- Image -->
-    <div class="overflow-hidden bg-white max-h-[310px]">
+    <div
+      class="overflow-hidden bg-brand-white border-b border-brand-black/50 max-h-[310px]"
+    >
       <img
         :src="props.image"
         :alt="title"

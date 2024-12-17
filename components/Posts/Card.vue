@@ -13,11 +13,11 @@ const props = defineProps<{
 <template>
   <NuxtLink
     :to="props.path"
-    class="block article pb-6 border-b border-zinc-700 border-dashed transition-all hover:transition-all hover:opacity-75 hover:border-zinc-400"
+    class="block article pb-6 border-b border-brand-black/50 border-dashed transition-all hover:transition-all hover:opacity-75 hover:border-zinc-400"
   >
     <div class="flex items-center gap-2 mb-3">
       <BaseTag v-if="props.tag">{{ props.tag }}</BaseTag>
-      <p class="flex gap-2 items-center text-sm text-zinc-400">
+      <p class="flex gap-2 items-center text-sm text-brand-black/50">
         {{ formatDate(props.date) }}
       </p>
     </div>
