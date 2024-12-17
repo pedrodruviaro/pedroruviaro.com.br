@@ -26,13 +26,11 @@ defineOgImageComponent("NuxtSeo", {
     />
 
     <PostsList v-if="content && content.length > 0">
-      <PostsCard
-        v-for="note in content"
-        :key="note._id"
-        :path="note._path!"
-        :title="note.title!"
-        :tag="note.tag"
-        :date="note.date"
+      <TILPostCard
+        v-for="til in content"
+        :key="til._id"
+        :path="til._path!"
+        :title="til.title!"
       />
     </PostsList>
   </BaseContainer>
