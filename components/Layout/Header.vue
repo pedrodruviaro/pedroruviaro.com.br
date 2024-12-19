@@ -4,6 +4,10 @@ const links = [
     label: "Início",
     to: "/",
   },
+  // {
+  //   label: "Sobre",
+  //   to: "/about",
+  // },
   {
     label: "Notas",
     to: "/notes",
