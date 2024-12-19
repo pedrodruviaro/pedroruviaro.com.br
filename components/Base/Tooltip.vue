@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="tooltip relative inline-block">
+  <div tabindex="0" class="tooltip relative inline-block">
     <slot />
     <span
       class="tooltiptext bg-brand-black/10 invisible text-brand-black text-center text-sm p-1 px-2 rounded-md absolute z-[1]"
@@ -15,7 +15,8 @@ const props = defineProps<{
 </template>
 
 <style scoped>
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
   visibility: visible;
 }
 </style>
