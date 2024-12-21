@@ -42,6 +42,10 @@ a {
   @apply border-brand-black/50;
 }
 
+p {
+  @apply text-brand-black;
+}
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.225s;

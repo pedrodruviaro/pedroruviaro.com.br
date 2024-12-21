@@ -32,7 +32,7 @@ const props = defineProps<{
       <BaseTitle size="md" class="mb-2">
         {{ props.title }}
       </BaseTitle>
-      <p class="text-sm">{{ props.description }}</p>
+      <p>{{ props.description }}</p>
       <ul class="flex flex-wrap gap-1 mt-4">
         <BaseTag as="li" v-for="tag in props.tags" :key="tag">
           {{ tag }}

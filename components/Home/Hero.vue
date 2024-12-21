@@ -16,7 +16,7 @@
       <strong class="font-extrabold">Desenvolvedor Front End</strong>
     </BaseTitle>
     <div class="space-y-3">
-      <p class="font-medium">
+      <p>
         Desenvolvedor web com mais de três anos de experiência focado em
         front-end, especialmente na stack Vue, Nuxt e TypeScript. Atualmente,
         também trabalho com PHP e Laravel, expandindo minhas habilidades para o

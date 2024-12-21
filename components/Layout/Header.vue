@@ -84,7 +84,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
               :key="link.to"
               :to="link.to"
               @click="handleCloseMenu"
-              class="font-extrabold [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
+              class="font-black [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
             >
               {{ link.label }}
             </NuxtLink>
