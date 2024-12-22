@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
     "@nuxt/scripts",
+    "@nuxtjs/color-mode",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",
@@ -19,9 +20,15 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
+  colorMode: {
+    preference: "light",
+    fallback: "light",
+    hid: "nuxt-color-mode-script",
+    storageKey: "pedroruviaro-color-mode",
+  },
   content: {
     highlight: {
-      theme: "vitesse-light",
+      theme: "dracula",
       langs: ["vue", "html", "css", "js", "ts", "php", "blade"],
     },
   },
