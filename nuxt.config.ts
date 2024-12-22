@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
     "@nuxt/scripts",
-    "nuxt-og-image",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",
