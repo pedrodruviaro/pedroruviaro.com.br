@@ -7,13 +7,6 @@ useSeoMeta({
 const { data: journals } = await useAsyncData("journals-query", () =>
   queryContent("/journals").sort({ date: -1 }).find()
 )
-
-defineOgImageComponent("NuxtSeo", {
-  title: "pedroruviaro",
-  description: "Journals - Documentando resumos do que ando aprendendo",
-  theme: "#111010",
-  colorMode: "dark",
-})
 </script>
 
 <template>

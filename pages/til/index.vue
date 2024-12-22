@@ -7,13 +7,6 @@ useSeoMeta({
 const { data: content } = await useAsyncData("til-query", () =>
   queryContent("/til").sort({ date: -1 }).find()
 )
-
-defineOgImageComponent("NuxtSeo", {
-  title: "pedroruviaro",
-  description: "TIL - Compartilhando o que aprendi no dia",
-  theme: "#111010",
-  colorMode: "dark",
-})
 </script>
 
 <template>

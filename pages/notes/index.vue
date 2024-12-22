@@ -63,13 +63,6 @@ watch(
     fetchNotes(val)
   }
 )
-
-defineOgImageComponent("NuxtSeo", {
-  title: "pedroruviaro",
-  description: "Notas - Compartilhando de tudo um pouco",
-  theme: "#111010",
-  colorMode: "dark",
-})
 </script>
 
 <template>

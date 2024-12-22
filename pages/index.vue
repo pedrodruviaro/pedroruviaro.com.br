@@ -5,13 +5,6 @@ useSeoMeta({
   ogTitle: "Início",
   ogDescription: "Olá, eu sou o Pedro. Desenvolvedor Front-End",
 })
-
-defineOgImageComponent("NuxtSeo", {
-  title: "pedroruviaro",
-  description: "Olá, eu sou o Pedro. Desenvolvedor-Front End",
-  theme: "#111010",
-  colorMode: "dark",
-})
 </script>
 
 <template>
