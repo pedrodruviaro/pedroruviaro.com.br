@@ -67,12 +67,19 @@ watch(
 
 <template>
   <BaseContainer as="section">
-    <BaseTitle
-      as="h1"
-      size="lg"
-      class="mb-10 lg:mb-16"
-      label="Compartilhando de tudo um pouco"
-    />
+    <div class="mb-10 lg:mb-16">
+      <BaseTitle
+        as="h1"
+        size="lg"
+        label="Compartilhando de tudo um pouco"
+        class="mb-4"
+      />
+
+      <p>
+        Por aqui eu gosto de compartilhar dicas, trechos de código algumas
+        reflexões sobre carreira e tecnologia.
+      </p>
+    </div>
 
     <PostsList v-if="notes && notes.length > 0">
       <PostsCard
