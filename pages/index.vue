@@ -12,5 +12,6 @@ useSeoMeta({
     <HomeHero />
     <HomeSocialLinks class="mt-6" />
     <HomeLatestPosts class="mt-10 lg:mt-20" />
+    <HomeProjects class="mt-10 lg:mt-16" />
   </BaseContainer>
 </template>
