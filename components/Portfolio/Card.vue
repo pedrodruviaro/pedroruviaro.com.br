@@ -11,11 +11,11 @@ const props = defineProps<{
 
 <template>
   <article
-    class="border bg-white border-brand-black/50 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
+    class="border bg-white border-brand-black/30 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
   >
     <!-- Image -->
     <div
-      class="overflow-hidden bg-brand-white border-b border-brand-black/50 max-h-[310px]"
+      class="overflow-hidden bg-brand-white border-b border-brand-black/30 max-h-[19.375rem]"
     >
       <img
         :src="props.image"
@@ -29,9 +29,7 @@ const props = defineProps<{
 
     <!-- Content -->
     <div class="p-4">
-      <BaseTitle size="md" class="mb-2">
-        {{ props.title }}
-      </BaseTitle>
+      <BaseTitle size="md" class="mb-2">{{ props.title }}</BaseTitle>
       <p>{{ props.description }}</p>
       <ul class="flex flex-wrap gap-1 mt-4">
         <BaseTag as="li" v-for="tag in props.tags" :key="tag">
@@ -53,7 +51,7 @@ const props = defineProps<{
         :href="props.githubUrl"
         target="_blank"
         rel="nofollow"
-        class="opacity-75 hover:opacity-50 flex items-center gap-1 py-2 text-sm"
+        class="hover:opacity-70 flex items-center gap-1 py-2 text-sm"
       >
         <div>
           <img
@@ -71,7 +69,7 @@ const props = defineProps<{
         :href="props.liveUrl"
         target="_blank"
         rel="nofollow"
-        class="opacity-75 hover:opacity-50 flex items-center gap-1 py-2 text-sm"
+        class="hover:opacity-70 flex items-center gap-1 py-2 text-sm"
       >
         <div>
           <img

@@ -26,7 +26,7 @@
       <div class="md:grid md:justify-end">
         <NuxtLink
           to="/projects"
-          class="bg-brand-black rounded-lg text-brand-white py-2 px-4 hover:bg-brand-black/85 transition-all"
+          class="leading-snug bg-brand-black rounded-lg text-brand-white py-2 px-4 hover:bg-brand-black/85 transition-all"
         >
           Explorar projetos
         </NuxtLink>
