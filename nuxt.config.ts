@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/scripts",
     "@nuxtjs/color-mode",
+    "nuxt-og-image",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",
@@ -31,5 +32,11 @@ export default defineNuxtConfig({
       theme: "dracula",
       langs: ["vue", "html", "css", "js", "ts", "php", "blade"],
     },
+  },
+  ogImage: {
+    defaults: {
+      component: "Custom",
+    },
+    strictNuxtContentPaths: true,
   },
 })
