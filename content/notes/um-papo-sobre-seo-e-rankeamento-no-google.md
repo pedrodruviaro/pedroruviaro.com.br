@@ -1,6 +1,12 @@
 ---
 date: "2025-01-07"
 tag: "seo"
+title: "Um papo sobre SEO e rankeamento no Google"
+description: "Entenda como otimizar o SEO do seu site para um bom rankeamento no Google. Descubra a importância do HTML semântico, arquivos essenciais como robots.txt e sitemap.xml, e como o Google Search Console pode ajudar a garantir a indexação correta e eficiente das suas páginas."
+ogTitle: "Um papo sobre SEO e rankeamento no Google"
+ogDescription: "Entenda como otimizar o SEO do seu site para um bom rankeamento no Google. Descubra a importância do HTML semântico, arquivos essenciais como robots.txt e sitemap.xml, e como o Google Search Console pode ajudar a garantir a indexação correta e eficiente das suas páginas."
+ogImage:
+  url: "/images/notes/banners/um-papo-sobre-seo-e-rankeamento-no-google.png"
 ---
 
 <!--more-->
