@@ -23,7 +23,7 @@ Dois arquivos muito importantes para garantir que seu site esteja visível, e co
 
 O arquivo `robots.txt` é o principal arquivo para controlar como os motores de busca interagem com o site. Ele define quais páginas ou diretórios devem ser indexados ou não. Essa configuração é especialmente útil para evitar que conteúdos irrelevantes sejam rastreados, como páginas administrativas ou arquivos desnecessários. Apesar de ser um arquivo muito simples, erros de configuração podem impedir a indexação de todas as páginas do site.
 
-## sitemal.xml
+## sitemap.xml
 
 Outro arquivo bastante importante é o `sitemap.xml`. ELe funciona como um mapa (ou guia) das páginas do site. O objetivo é auxioliar os _bots_ a identificarem a estrutura completa do site e priorizarem o rastreamento de páginas mais importantes. Isso acaba sendo mais relevante para sites grandes, com muitas páginas, ou com estrutura complexa (como blog com múltiplas categorizações, por exemplo). O `sitemap.xml` também pode incluir informações adicionais, como a frequência de atualização das páginas ou o número de imagens presentes em cada uma delas.
 
