@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxt/scripts",
     "@nuxtjs/color-mode",
-    "nuxt-og-image",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",
@@ -24,19 +23,11 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
     fallback: "light",
-    hid: "nuxt-color-mode-script",
     storageKey: "pedroruviaro-color-mode",
   },
   content: {
     highlight: {
-      theme: "dracula",
-      langs: ["vue", "html", "css", "js", "ts", "php", "blade"],
+      theme: "vitesse-light",
     },
-  },
-  ogImage: {
-    defaults: {
-      component: "Custom",
-    },
-    strictNuxtContentPaths: true,
   },
 })
