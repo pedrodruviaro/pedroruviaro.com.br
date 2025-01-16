@@ -19,8 +19,8 @@
       <p>
         Desenvolvedor web com mais de três anos de experiência focado em
         front-end, especialmente na stack Vue, Nuxt e TypeScript. Atualmente,
-        também trabalho com PHP e Laravel, expandindo minhas habilidades para o
-        back-end e projetos fullstack.
+        também navego no universo PHP e Laravel, expandindo minhas habilidades
+        para o back-end e projetos fullstack.
       </p>
     </div>
   </section>

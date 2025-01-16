@@ -3,16 +3,16 @@
 <template>
   <section>
     <div
-      class="border border-brand-black/50 rounded-xl p-5 grid gap-5 md:p-10 md:grid-cols-[1fr_.5fr] md:items-center"
+      class="border border-brand-black/30 rounded-xl p-5 grid gap-5 md:p-10 md:grid-cols-[1fr_.5fr] md:items-center"
     >
       <div>
         <BaseTitle
           size="sm"
-          label="Quer conhecer meus projetos?"
+          label="Conheça alguns de meus projetos"
           class="mb-1"
         />
         <p>
-          Conheça o que ando produzinho no meu tempo livre. Caso queira saber
+          Explore o que eu ando produzinho no meu tempo livre. Caso queira saber
           mais sobre projetos profissionais e outras experiências, entre em
           contato pelo meu
           <a

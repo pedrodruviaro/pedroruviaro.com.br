@@ -33,8 +33,8 @@ const stack = [
       <BaseTitle size="md" label="Stack de trabalho" />
     </template>
     <p>
-      Já trabalhei com alguns frameworks e bibliotecas JavaScript. No entanto,
-      se eu tivesse que escolher minha stack de tecnologia dos sonhos (e a que
+      Já trabalhei com alguns frameworks e bibliotecas JavaScript, no entanto,
+      se eu tivesse que escolher minha stack de tecnologia dos sonhos (a que
       mais gosto de trabalhar), seria a seguinte:
     </p>
 
@@ -52,13 +52,14 @@ const stack = [
 
     <p>
       Por trabalhar muito de perto com designers, tenho conhecimentos em Figma e
-      UI/UX. Da minha experiência em agência, trago uma forte bagagem de SEO e
-      otimização web.
+      UI/UX. Da minha passagem por agência, trago uma forte bagagem de SEO e
+      otimização web, além de experiência em lidar com clientes, prazos e
+      mudanças de escopo.
     </p>
 
     <p>
       <NuxtLink to="/projects" class="border-b border-dashed"
-        >Conheça alguns dos projetos pessoais</NuxtLink
+        ><strong>Conheça alguns dos projetos pessoais</strong></NuxtLink
       >
       ou acesse meu
       <a
@@ -66,7 +67,7 @@ const stack = [
         target="_blank"
         rel="nofollow"
         class="border-b border-dashed"
-        >GitHub</a
+        ><strong>GitHub</strong></a
       >
       e explore o que ando desenvolvendo.
     </p>
