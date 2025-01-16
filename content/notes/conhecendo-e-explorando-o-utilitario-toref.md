@@ -5,7 +5,7 @@ tag: "vue"
 
 <!--more-->
 
-# Explorando o Vue: Entendendo o utilitário toRef
+# Conhecendo e explorando o utilitário toRef
 
 A função utilitária `toRef”` do Vue possui várias funcionalidades. Uma delas é a criação de uma **referência reativa para uma propriedade específica de um objeto também reativo**.
 
