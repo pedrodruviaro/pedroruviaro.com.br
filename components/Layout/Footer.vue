@@ -6,7 +6,7 @@ const currentYear = computed(() => new Date().getFullYear())
   <BaseContainer as="footer" class="mt-6 py-6 border-t border-brand-black/50">
     <div variant="dark">
       <div class="flex gap-2 flex-wrap items-center justify-between">
-        <p class="font-bold">pedroruviaro.com.br</p>
+        <NuxtLink to="/" class="font-bold">pedroruviaro.com.br</NuxtLink>
         <p class="text-sm">
           &copy; Copyright {{ currentYear }} - Todos os direitos reservados.
         </p>
