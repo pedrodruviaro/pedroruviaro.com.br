@@ -24,7 +24,6 @@ onMounted(() => {
 
 <template>
   <div>
-    <LayoutBanner />
     <NuxtLayout>
       <NuxtLoadingIndicator :height="4" color="#111" />
       <NuxtPage />
