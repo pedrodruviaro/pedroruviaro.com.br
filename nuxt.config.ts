@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "vitesse-light",
+      theme: "dracula-soft",
     },
   },
 })
