@@ -43,7 +43,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
     <div>
       <div class="flex gap-4 justify-between items-center">
         <div>
-          <NuxtLink to="/" @click="handleCloseMenu">
+          <NuxtLink aria-label="Início" to="/" @click="handleCloseMenu">
             <div>
               <img
                 src="/images/logo.svg"
@@ -57,8 +57,9 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
 
         <button
           class="grid justify-center gap-1 rounded p-1 [@media(min-width:900px)]:hidden"
-          @click="isMenuOpen = !isMenuOpen"
           ref="hamburguerButtonRef"
+          @click="isMenuOpen = !isMenuOpen"
+          :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
         >
           <span
             class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
@@ -84,7 +85,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
               :key="link.to"
               :to="link.to"
               @click="handleCloseMenu"
-              class="font-bold [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
+              class="font-black [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
             >
               {{ link.label }}
             </NuxtLink>
@@ -97,7 +98,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
 
 <style scoped>
 .router-link-active {
-  @apply underline decoration-2 underline-offset-4 decoration-brand-black;
+  @apply underline decoration-2 underline-offset-4 decoration-brand-pink;
 }
 
 .v-enter-active,

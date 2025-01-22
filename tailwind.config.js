@@ -6,6 +6,7 @@ module.exports = {
         brand: {
           black: "#111",
           white: "#f8f7f4",
+          pink: "#FF79C6",
         },
       },
     },

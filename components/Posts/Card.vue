@@ -17,7 +17,7 @@ const props = defineProps<{
   >
     <div class="flex items-center gap-2 mb-3">
       <BaseTag v-if="props.tag">{{ props.tag }}</BaseTag>
-      <p class="flex gap-2 items-center text-sm text-brand-black/50">
+      <p class="flex gap-2 items-center text-sm text-brand-black/60">
         {{ formatDate(props.date) }}
       </p>
     </div>

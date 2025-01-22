@@ -4,7 +4,8 @@
   <section>
     <div class="rounded-full overflow-hidden w-20 h-20">
       <img
-        src="/images/avatar.png"
+        src="/images/avatar-80.webp"
+        srcset="/images/avatar-160.webp 2x, /images/avatar-240.webp 3x"
         alt="Pedro, visto de frente"
         width="80"
         height="80"
