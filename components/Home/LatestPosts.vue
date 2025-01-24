@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: notes } = await useAsyncData("home-notes", () =>
-  queryContent("/notes").sort({ date: -1 }).limit(5).find()
+  queryContent("/notes").sort({ date: -1 }).limit(7).find()
 )
 </script>
 

@@ -9,7 +9,13 @@ useSeoMeta({
 
 <template>
   <BaseContainer size="lg">
-    <PortfolioHeadline class="mb-10 lg:mb-16" />
+    <BaseTitle
+      center
+      as="h1"
+      size="xl"
+      label="Portfólio de projetos"
+      class="mb-10 lg:mb-16"
+    />
 
     <section class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       <PortfolioCard

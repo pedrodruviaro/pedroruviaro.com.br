@@ -11,7 +11,7 @@ const props = defineProps<{
 
 <template>
   <article
-    class="border bg-white border-brand-black/30 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
+    class="border bg-white border-brand-black/20 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
   >
     <!-- Image -->
     <div

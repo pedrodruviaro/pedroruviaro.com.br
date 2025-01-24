@@ -3,7 +3,7 @@
 <template>
   <section>
     <div
-      class="border border-brand-black/30 rounded-xl p-5 grid gap-5 md:p-10 md:grid-cols-[1fr_.5fr] md:items-center"
+      class="border border-brand-black/20 rounded-xl p-5 grid gap-5 md:p-8 md:grid-cols-[1fr_.5fr] md:items-center"
     >
       <div>
         <BaseTitle
