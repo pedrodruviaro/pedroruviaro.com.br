@@ -20,12 +20,25 @@ onMounted(() => {
   //@ts-ignore
   cronitor("config", { clientKey: "2c7f65d1581b7c10d8715205e8601209" })
 })
+
+const colorMode = useColorMode()
 </script>
 
 <template>
   <div>
+    <div>
+      <h1>Color mode: {{ $colorMode.value }}</h1>
+      <select v-model="$colorMode.preference">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </div>
     <NuxtLayout>
-      <NuxtLoadingIndicator :height="4" color="#111" />
+      <NuxtLoadingIndicator
+        :height="4"
+        :color="colorMode.preference === 'light' ? '#111' : '#f8f7f2'"
+      />
       <NuxtPage />
     </NuxtLayout>
   </div>
@@ -34,15 +47,15 @@ onMounted(() => {
 <style>
 html,
 body {
-  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden;
+  @apply bg-brand-white text-brand-black dark:bg-brand-black dark:text-brand-white scroll-smooth overflow-x-hidden;
 }
 
 a {
-  @apply border-brand-black/50;
+  @apply border-brand-black/50 dark:border-brand-white/50;
 }
 
 p {
-  @apply text-brand-black;
+  @apply text-brand-black dark:text-brand-white;
 }
 
 .page-enter-active,

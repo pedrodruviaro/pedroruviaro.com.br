@@ -6,13 +6,15 @@ import { formatDate } from "~/utils/post/formatDate"
   <BaseContainer as="section">
     <BaseProgressBar />
 
-    <div class="prose max-w-[100%]">
+    <div class="prose dark:prose-invert max-w-[100%]">
       <ContentDoc>
         <template v-slot="{ doc }">
           <div>
             <div class="mb-6 lg:mb-8 flex gap-3 items-center flex-wrap">
               <BaseTag>{{ doc.tag }}</BaseTag>
-              <p class="text-sm mb-0 mt-0 text-brand-black/80">
+              <p
+                class="text-sm mb-0 mt-0 text-brand-black/80 dark:text-brand-white/80"
+              >
                 {{ formatDate(doc.date) }}
               </p>
             </div>

@@ -33,12 +33,14 @@ onClickOutside(
 )
 
 const isLargeScreen = useMediaQuery("(min-width: 900px)")
+
+const colorMode = useColorMode()
 </script>
 
 <template>
   <BaseContainer
     as="header"
-    class="py-6 border-b border-brand-black/50 relative"
+    class="py-6 border-b border-brand-black/50 dark:border-brand-white/50 relative"
   >
     <div>
       <div class="flex gap-4 justify-between items-center">
@@ -46,10 +48,20 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
           <NuxtLink aria-label="Início" to="/" @click="handleCloseMenu">
             <div>
               <img
+                src="/images/logo-light.svg"
+                width="214"
+                height="38"
+                alt=""
+                aria-hidden="true"
+                v-show="colorMode.preference === 'dark'"
+              />
+              <img
                 src="/images/logo.svg"
                 width="214"
                 height="38"
-                alt="pedroruviaro"
+                alt=""
+                aria-hidden="true"
+                v-show="colorMode.preference === 'light'"
               />
             </div>
           </NuxtLink>
@@ -62,14 +74,14 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
           :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
         >
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
+            class="w-8 h-1 bg-brand-black dark:bg-brand-white relative right-0 ml-auto transition-all"
           ></span>
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
+            class="w-8 h-1 bg-brand-black dark:bg-brand-white relative right-0 ml-auto transition-all"
             :class="{ 'w-6': isMenuOpen }"
           ></span>
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
+            class="w-8 h-1 bg-brand-black dark:bg-brand-white relative right-0 ml-auto transition-all"
             :class="{ 'w-4': isMenuOpen }"
           ></span>
         </button>
@@ -77,7 +89,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
         <Transition>
           <nav
             v-show="isMenuOpen || isLargeScreen"
-            class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-brand-white [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1"
+            class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-brand-white dark:bg-brand-black [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1"
             ref="menuRef"
           >
             <NuxtLink
