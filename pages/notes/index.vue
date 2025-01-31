@@ -8,7 +8,7 @@ useSeoMeta({
 
 const notes = ref<ParsedContent[]>([])
 
-const LIMIT = 10
+const LIMIT = 14
 const skip = ref(0)
 const numOfPages = ref(0)
 const currentPage = ref(1)
@@ -96,9 +96,9 @@ watch(
 
     <div class="flex items-center justify-end gap-2 mt-10">
       <button
+        class="p-2 w-10 border border-zinc-800 rounded-md text-sm grid place-items-center aspect-square hover:opacity-80 transition-all"
         v-for="index in numOfPages"
         :key="index"
-        class="p-2 w-10 border border-zinc-800 rounded-md text-sm grid place-items-center aspect-square hover:opacity-80 transition-all"
         :class="{ 'bg-brand-black/10': currentPage === index }"
         @click="() => router.push({ query: { page: index } })"
       >
