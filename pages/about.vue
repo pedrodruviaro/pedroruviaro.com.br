@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { AboutEducation } from "#components"
+
 useSeoMeta({
-  title: "Sobre mim",
+  title: "Sobre",
   description: "Conheça mais sobre mim.",
-  ogTitle: "Sobre mim",
+  ogTitle: "Sobre",
   ogDescription: "Conheça mais sobre mim.",
 })
 </script>
@@ -12,6 +14,7 @@ useSeoMeta({
     <AboutMe />
     <AboutStack />
     <AboutJobs />
+    <AboutEducation />
     <AboutVolunteer />
     <AboutContact />
   </BaseContainer>
