@@ -22,8 +22,8 @@
         front-end, especialmente na stack
         <strong>Vue</strong>, <strong>Nuxt</strong> e
         <strong>TypeScript</strong>. Atualmente, também navego no universo
-        <strong>PHP</strong> e <strong>Laravel</strong>, expandindo minhas
-        habilidades para o back-end e projetos fullstack.
+        <strong>PHP/Laravel</strong> e <strong>Node.js</strong>, expandindo
+        minhas habilidades para o back-end e projetos fullstack.
       </p>
     </div>
   </section>
