@@ -7,13 +7,15 @@ tag: "nuxt"
 
 # Evitando erros de hidratação com o `<ClientOnly>`
 
-Por padrão, o Nuxt usa renderização universal (SSR + CSR), o que significa que o código pode ser executado tanto no servidor quanto no cliente. Mas e quando um componente depende apenas do ambiente do navegador?
+Trabalhar com SSR é lidar com erros de hidratação inesperados o tempo todo.
 
-Se tentarmos renderizá-lo diretamente no SSR, podemos acabar com erros de hidratação. Para evitar isso, o Nuxt oferece o componente <ClientOnly>, que garante que o conteúdo dentro dele só será renderizado no client-side.
+Por padrão, o _Nuxt_ usa **renderização universal (SSR + CSR)** e um posterior processo de hidratação. **Mas e quando um componente depende apenas do ambiente do navegador?**
 
-Além disso, podemos definir um fallback, que será exibido enquanto o componente do cliente ainda não foi carregado.
+Ao tentarmos renderizá-lo diretamente no servidor, podemos acabar com aqueles erros chatos de hidratação. Para evitar isso, o _Nuxt_ oferece o componente <ClientOnly>, que garante que o conteúdo só será renderizado no cliente.
 
-Isso é útil, por exemplo, para componentes que usam APIs do navegador, como o localStorage, evitando erros de execução no servidor. Veja um exemplo:
+Dessa forma, evitamos verificações de _"window"_ ou gambiarras para checar em qual ambiente estamos. Além disso, podemos definir um _fallback_ que será exibido enquanto o componente carrega.
+
+Isso é muito útil para componentes que usam APIs do navegador, como o localStorage, ou client-side bibliotecas como o [monaco-editor](https://www.npmjs.com/package/@guolao/vue-monaco-editor). Veja um exemplo:
 
 ```vue
 <script setup>
@@ -33,11 +35,9 @@ onMounted(() => {
 </template>
 ```
 
-Se você tentar executar seu aplicativo, o Nuxt lançará um erro: "localStorage is not defined"
+Se você tentar executar, o _Nuxt_ lançará um erro: _"localStorage is not defined"_. Isso ocorre porque o código é executado primeiro no servidor, que não suporta localStorage.
 
-Isso ocorre porque o código é executado primeiro no servidor, que não suporta localStorage.
-
-Você pode resolver esse problema usando o componente ClientOnly:
+Podemos resolver isso usando o componente `<ClientOnly>`:
 
 ```vue
 <script setup lang="ts"></script>
