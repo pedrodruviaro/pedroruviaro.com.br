@@ -43,7 +43,12 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
     <div>
       <div class="flex gap-4 justify-between items-center">
         <div>
-          <NuxtLink aria-label="Início" to="/" @click="handleCloseMenu">
+          <NuxtLink
+            aria-label="Início"
+            to="/"
+            @click="handleCloseMenu"
+            class="hover:opacity-75 focus:opacity-75 transition-all"
+          >
             <div>
               <img
                 src="/images/logo.svg"
@@ -98,7 +103,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
 
 <style scoped>
 .router-link-active {
-  @apply underline decoration-2 underline-offset-4 decoration-brand-pink;
+  @apply underline decoration-2 underline-offset-4 decoration-brand-accent;
 }
 
 .v-enter-active,

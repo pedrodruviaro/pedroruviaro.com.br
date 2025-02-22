@@ -19,7 +19,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="fixed top-0 left-0 h-1 bg-brand-pink"
+    class="fixed top-0 left-0 h-1 bg-brand-accent"
     :style="{ width: `${scrollProgress}%` }"
   ></div>
 </template>
