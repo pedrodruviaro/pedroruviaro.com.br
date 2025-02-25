@@ -1,5 +1,13 @@
 export const jobExperiences = [
   {
+    title: "Desenvolvedor Front-End @ Migrate Brasil",
+    subtitle: "Fev de 2025 - momento",
+    content: [
+      // @TODO -> add content
+    ],
+    stack: "TypeScript, React, NodeJS, Express",
+  },
+  {
     title: "Desenvolvedor Front-End @ wire art",
     subtitle: "Mai de 2024 - momento",
     content: [
