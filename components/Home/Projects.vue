@@ -3,7 +3,7 @@
 <template>
   <section>
     <div
-      class="border border-brand-black/20 rounded-xl p-5 grid gap-5 md:p-8 md:grid-cols-[1fr_.5fr] md:items-center"
+      class="border border-brand-black rounded-xl p-5 grid gap-5 md:p-8 md:grid-cols-[1fr_.5fr] md:items-center"
     >
       <div>
         <BaseTitle
@@ -26,7 +26,7 @@
       <div class="md:grid md:justify-end">
         <NuxtLink
           to="/projects"
-          class="leading-snug bg-brand-black rounded-lg text-brand-white py-2 px-4 hover:bg-brand-black/85 transition-all"
+          class="leading-snug bg-brand-accent rounded-lg border border-brand-black text-brand-black py-2 px-4 hover:bg-brand-accent/50 transition-all"
         >
           Explorar projetos
         </NuxtLink>

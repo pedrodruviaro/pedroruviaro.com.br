@@ -6,7 +6,7 @@ module.exports = {
         brand: {
           black: "#111",
           white: "#f8f7f4",
-          accent: "#793399",
+          accent: "#62E884",
         },
       },
     },
