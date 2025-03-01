@@ -67,15 +67,15 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
           :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
         >
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
+            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
           ></span>
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
-            :class="{ 'w-6': isMenuOpen }"
+            class="h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
+            :class="{ 'w-6': isMenuOpen, 'w-8': !isMenuOpen }"
           ></span>
           <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all"
-            :class="{ 'w-4': isMenuOpen }"
+            class="h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
+            :class="{ 'w-4': isMenuOpen, 'w-8': !isMenuOpen }"
           ></span>
         </button>
 
