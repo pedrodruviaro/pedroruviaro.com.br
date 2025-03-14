@@ -24,7 +24,7 @@ importers:
         specifier: ^7.2.7
         version: 7.2.7(h3@1.15.1)(magicast@0.3.5)(vite@6.2.1(@types/node@22.13.10)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.2))
       nuxt:
-        specifier: ^3.16.0
+        specifier: ^3.15.4
         version: 3.16.0(@parcel/watcher@2.5.0)(@types/node@22.13.10)(db0@0.3.1)(ioredis@5.6.0)(magicast@0.3.5)(rollup@4.35.0)(terser@5.39.0)(tsx@4.19.2)(typescript@5.7.2)(vite@6.2.1(@types/node@22.13.10)(jiti@2.4.2)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0)
       vue:
         specifier: ^3.5.13
@@ -6161,7 +6161,7 @@ snapshots:
       defu: 6.1.4
       esbuild: 0.25.0
       escape-string-regexp: 5.0.0
-      exsolve: 1.0.2
+      exsolve: 1.0.4
       externality: 1.0.2
       get-port-please: 3.1.2
       h3: 1.15.1
@@ -9320,7 +9320,7 @@ snapshots:
       esbuild: 0.25.0
       escape-string-regexp: 5.0.0
       etag: 1.8.1
-      exsolve: 1.0.2
+      exsolve: 1.0.4
       fs-extra: 11.3.0
       globby: 14.1.0
       gzip-size: 7.0.0
@@ -9488,7 +9488,7 @@ snapshots:
       esbuild: 0.25.0
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
-      exsolve: 1.0.2
+      exsolve: 1.0.4
       globby: 14.1.0
       h3: 1.15.1
       hookable: 5.5.3
@@ -10744,7 +10744,7 @@ snapshots:
   unenv@2.0.0-rc.12:
     dependencies:
       defu: 6.1.4
-      exsolve: 1.0.2
+      exsolve: 1.0.4
       ohash: 2.0.11
       pathe: 2.0.3
       ufo: 1.5.4
@@ -10929,7 +10929,7 @@ snapshots:
 
   unplugin@1.16.1:
     dependencies:
-      acorn: 8.14.0
+      acorn: 8.14.1
       webpack-virtual-modules: 0.6.2
 
   unplugin@2.1.2:
