@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "@nuxt/content",
     "@vueuse/nuxt",
-    "@nuxt/scripts",
     "@nuxtjs/color-mode",
   ],
   site: {
