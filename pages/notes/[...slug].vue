@@ -11,7 +11,12 @@ import { formatDate } from "~/utils/post/formatDate"
         <template v-slot="{ doc }">
           <div>
             <div class="mb-6 lg:mb-8 flex gap-3 items-center flex-wrap">
-              <BaseTag>{{ doc.tag }}</BaseTag>
+              <NuxtLink
+                :to="`/notes/tag/${doc.tag}`"
+                class="text-inherit no-underline font-normal"
+              >
+                <BaseTag>{{ doc.tag }}</BaseTag>
+              </NuxtLink>
               <p class="text-sm mb-0 mt-0 text-brand-black/80">
                 {{ formatDate(doc.date) }}
               </p>
