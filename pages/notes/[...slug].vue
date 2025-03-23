@@ -13,7 +13,7 @@ import { formatDate } from "~/utils/post/formatDate"
             <div class="mb-6 lg:mb-8 flex gap-3 items-center flex-wrap">
               <NuxtLink
                 :to="`/notes/tag/${doc.tag}`"
-                class="text-inherit no-underline"
+                class="text-inherit no-underline font-normal"
               >
                 <BaseTag>{{ doc.tag }}</BaseTag>
               </NuxtLink>
