@@ -27,6 +27,17 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: "dracula-soft",
+      langs: [
+        "vue",
+        "html",
+        "css",
+        "javascript",
+        "js",
+        "jsx",
+        "typescript",
+        "ts",
+        "php",
+      ],
     },
   },
 })
