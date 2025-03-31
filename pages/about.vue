@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { AboutEducation, AboutExperienceCard } from "#components"
-
 useSeoMeta({
   title: "Sobre",
   description: "Conheça mais sobre mim.",
@@ -14,7 +12,6 @@ useSeoMeta({
     <AboutMe />
     <AboutStack />
     <AboutExperiences />
-    <AboutEducation />
     <AboutVolunteer />
     <AboutContact />
   </BaseContainer>
