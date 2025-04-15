@@ -5,11 +5,22 @@ tag: "acessibilidade"
 
 # Tornando conteúdo acessível com a classe sr-only
 
-A acessibilidade na web vai além de contrastes e tamanhos de fonte. Ela envolve também a forma como as informações são disponibilizadas para tecnologias assistivas, como leitores de tela. Uma técnica importante nesse cenário é a de esconder visualmente um conteúdo, sem removê-lo da árvore de acessibilidade — e é exatamente isso que a classe sr-only do Tailwind CSS proporciona.
+Recentemente, citei como acessibilidade é um tema delicado e difícil de acertar. Uma técnica simples e rápida para melhorarmos a experiência de quem usa leitores de tela é esconder visualmente um conteúdo, sem removê-lo do DOM.
 
-Ao aplicar sr-only a um elemento, ele se torna invisível para usuários que navegam visualmente, mas permanece disponível para leitores de tela. Essa abordagem é útil em diversos contextos: por exemplo, quando queremos fornecer uma descrição adicional para usuários de leitores de tela ou indicar a funcionalidade de um botão que depende apenas de ícones visuais.
+Dentro do Tailwind, podemos usar a classe `sr-only`. Deixei o códig completo aqui embaixo 👇🏻
 
-No Tailwind, a classe sr-only aplica um conjunto de estilos baseados em uma técnica consolidada na comunidade de desenvolvimento front-end. Esses estilos posicionam o elemento fora da tela, reduzem seu tamanho, impedem que ele afete o layout da página e ainda garantem que continue acessível ao foco assistivo.
+Ao aplicar `sr-only` a um elemento, ele se torna invisível para o usuário padrão, mas permanece disponível para leitores de tela. Isso é útil em diversos contextos — por exemplo, quando queremos fornecer uma descrição adicional para usuários de leitores de tela ou indicar a funcionalidade de um botão que depende apenas de ícones visuais.
+
+Exemplo de uso dentro do React, utilizando da classe `sr-only` para esconder o texto interno do botão de paginação:
+
+```jsx
+<Button variant="outline" className="h-8 w-8 p-0">
+  <ChevronsLeft className="h-4 w-4" />
+  <span className="sr-only">Primeira página</span>
+</Button>
+```
+
+Os estilos aplicados pela classe são baseados em uma técnica consolidada na comunidade front-end. Pesquisando, percebemos que ela existe há muitos anos e sempre foi um “hack” para melhorar a acessibilidade.
 
 ```css
 .sr-only {
@@ -25,8 +36,4 @@ No Tailwind, a classe sr-only aplica um conjunto de estilos baseados em uma téc
 }
 ```
 
-Mesmo fora do Tailwind, esse padrão pode ser replicado em projetos utilizando CSS puro, com uma classe personalizada. O mais importante é entender sua função: ocultar o conteúdo visualmente sem excluí-lo da experiência de navegação para pessoas com deficiência visual.
-
-Outro ponto relevante é o uso combinado com a classe not-sr-only no Tailwind, que permite reverter a ocultação quando necessário — por exemplo, para tornar o conteúdo visível em determinados pontos de breakpoints.
-
-Implementar práticas como essa é um passo simples, mas significativo, rumo a uma web mais inclusiva. Ao adotar soluções como a sr-only, desenvolvedores contribuem diretamente para que mais pessoas possam acessar, compreender e interagir com o conteúdo digital de maneira plena.
+Mesmo fora do Tailwind, esse padrão pode ser replicado em projetos utilizando CSS puro ou com compiladores. O mais importante é entender o objetivo: ocultar o conteúdo visualmente, sem excluí-lo da navegação para pessoas com deficiência visual.
