@@ -6,7 +6,7 @@ import { formatDate } from "~/utils/post/formatDate"
   <BaseContainer as="section">
     <BaseProgressBar />
 
-    <div class="prose max-w-[100%]">
+    <div class="prose dark:prose-invert max-w-[100%]">
       <ContentDoc>
         <template v-slot="{ doc }">
           <div>

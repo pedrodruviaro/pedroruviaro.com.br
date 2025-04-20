@@ -21,15 +21,15 @@ useHead({
 <style>
 html,
 body {
-  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden;
+  @apply bg-brand-white text-brand-black dark:bg-brand-black dark:text-brand-white scroll-smooth overflow-x-hidden;
 }
 
 a {
-  @apply border-brand-black/50;
+  @apply border-brand-black/50 dark:border-brand-white/50;
 }
 
 p {
-  @apply text-brand-black;
+  @apply text-brand-black dark:text-brand-white;
 }
 
 .page-enter-active,

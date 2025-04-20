@@ -41,7 +41,7 @@ const links = [
             :href="link.href"
             :target="link.target"
             :rel="link.rel"
-            class="opacity-75 hover:opacity-50"
+            class="opacity-75 hover:opacity-50 dark:invert"
           >
             <img
               :src="`/images/${link.iconPath}`"

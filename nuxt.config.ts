@@ -20,9 +20,11 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   colorMode: {
-    preference: "light",
-    fallback: "light",
+    classSuffix: "",
+    preference: "system",
+    fallback: "dark",
     storageKey: "pedroruviaro-color-mode",
+    storage: "cookie",
   },
   content: {
     highlight: {
