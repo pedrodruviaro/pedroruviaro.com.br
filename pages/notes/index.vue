@@ -99,7 +99,9 @@ watch(
         class="p-2 w-10 border border-zinc-800 rounded-md text-sm grid place-items-center aspect-square hover:opacity-80 transition-all"
         v-for="index in numOfPages"
         :key="index"
-        :class="{ 'bg-brand-black/10': currentPage === index }"
+        :class="{
+          'bg-neutral-950/10 dark:bg-neutral-200/10': currentPage === index,
+        }"
         @click="() => router.push({ query: { page: index } })"
       >
         {{ index }}

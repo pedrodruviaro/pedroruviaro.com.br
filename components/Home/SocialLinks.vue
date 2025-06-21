@@ -49,8 +49,10 @@ const links = [
               aria-hidden="true"
               width="30"
               height="30"
-            /> </NuxtLink
-        ></BaseTooltip>
+              class="dark:invert"
+            />
+          </NuxtLink>
+        </BaseTooltip>
       </li>
     </ul>
   </section>

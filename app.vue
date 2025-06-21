@@ -7,10 +7,22 @@ useHead({
     return chunk ? `${chunk} - pedroruviaro` : "pedroruviaro"
   },
 })
+
+const colorMode = useColorMode()
 </script>
 
 <template>
   <div>
+    <div>
+      <h1>Color mode: {{ $colorMode.value }}</h1>
+      <select v-model="$colorMode.preference">
+        <option value="system">System</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="sepia">Sepia</option>
+      </select>
+    </div>
+
     <NuxtLayout>
       <NuxtLoadingIndicator :height="3" color="#17171785" />
       <NuxtPage />
@@ -21,15 +33,11 @@ useHead({
 <style>
 html,
 body {
-  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden font-[Inter];
+  @apply bg-neutral-200 text-neutral-900 scroll-smooth overflow-x-hidden font-[Inter] dark:bg-neutral-900 dark:text-neutral-200;
 }
 
 a {
-  @apply border-brand-black/50;
-}
-
-p {
-  @apply text-brand-black;
+  @apply border-neutral-900 dark:border-neutral-200;
 }
 
 .page-enter-active,
