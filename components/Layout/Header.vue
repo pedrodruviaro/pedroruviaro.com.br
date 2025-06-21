@@ -36,10 +36,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
 </script>
 
 <template>
-  <BaseContainer
-    as="header"
-    class="py-6 border-b border-brand-black/50 relative"
-  >
+  <BaseContainer as="header" class="py-6 relative">
     <div>
       <div class="flex gap-4 justify-between items-center">
         <div>
@@ -47,16 +44,9 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
             aria-label="Início"
             to="/"
             @click="handleCloseMenu"
-            class="hover:opacity-75 focus:opacity-75 transition-all"
+            class="hover:opacity-75 focus:opacity-75 transition-all !no-underline"
           >
-            <div>
-              <img
-                src="/images/logo.svg"
-                width="214"
-                height="38"
-                alt="pedroruviaro"
-              />
-            </div>
+            <Logo />
           </NuxtLink>
         </div>
 
@@ -103,7 +93,7 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
 
 <style scoped>
 .router-link-active {
-  @apply underline decoration-2 underline-offset-4 decoration-brand-accent;
+  @apply underline decoration-2 underline-offset-4;
 }
 
 .v-enter-active,

@@ -3,7 +3,7 @@ const currentYear = computed(() => new Date().getFullYear())
 </script>
 
 <template>
-  <BaseContainer as="footer" class="mt-6 py-6 border-t border-brand-black/50">
+  <BaseContainer as="footer" class="mt-6 py-6">
     <div variant="dark">
       <div class="flex gap-2 flex-wrap items-center justify-between">
         <NuxtLink to="/" class="font-bold">pedroruviaro.com.br</NuxtLink>

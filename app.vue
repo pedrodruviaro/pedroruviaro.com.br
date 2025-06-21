@@ -21,7 +21,7 @@ useHead({
 <style>
 html,
 body {
-  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden;
+  @apply bg-brand-white text-brand-black scroll-smooth overflow-x-hidden font-[Inter];
 }
 
 a {
