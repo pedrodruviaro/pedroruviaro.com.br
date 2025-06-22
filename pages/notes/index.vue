@@ -19,11 +19,11 @@ const initialPage = computed(() => parseInt(route.query.page as string) || 1)
 currentPage.value = initialPage.value
 skip.value = (currentPage.value - 1) * LIMIT
 
-const { data: totalCount } = await useAsyncData("home-notes-count", () =>
+const { data: totalCount } = await useAsyncData("notes-count", () =>
   queryContent("/notes").count()
 )
 
-const { data } = await useAsyncData("home-notes", () =>
+const { data } = await useAsyncData("notes", () =>
   queryContent("/notes").sort({ date: -1 }).limit(LIMIT).skip(skip.value).find()
 )
 
@@ -99,7 +99,9 @@ watch(
         class="p-2 w-10 border border-zinc-800 rounded-md text-sm grid place-items-center aspect-square hover:opacity-80 transition-all"
         v-for="index in numOfPages"
         :key="index"
-        :class="{ 'bg-brand-black/10': currentPage === index }"
+        :class="{
+          'bg-neutral-950/10 dark:bg-neutral-200/10': currentPage === index,
+        }"
         @click="() => router.push({ query: { page: index } })"
       >
         {{ index }}

@@ -24,7 +24,7 @@ const { data: totalCount } = await useAsyncData("slug-notes-count", () =>
   queryContent("/notes").where({ tag: slug.value }).count()
 )
 
-const { data } = await useAsyncData("home-notes", () =>
+const { data } = await useAsyncData("notes-tag-slug", () =>
   queryContent("/notes")
     .sort({ date: -1 })
     .limit(LIMIT)

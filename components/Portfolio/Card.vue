@@ -11,11 +11,11 @@ const props = defineProps<{
 
 <template>
   <article
-    class="border bg-white border-brand-black/20 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
+    class="border bg-neutral-100 dark:bg-neutral-800 border-neutral-950/20 rounded-lg grid grid-rows-[max-content_1fr_max-content] gap-6 overflow-hidden"
   >
     <!-- Image -->
     <div
-      class="overflow-hidden bg-brand-white border-b border-brand-black/30 max-h-[19.375rem]"
+      class="overflow-hidden bg-neutral-100 dark:bg-neutral-900 border-b border-neutral-950/30 dark:border-neutral-100/30 max-h-[19.375rem]"
     >
       <img
         :src="props.image"
@@ -60,6 +60,7 @@ const props = defineProps<{
             aria-hidden="true"
             width="20"
             height="20"
+            class="dark:invert"
           />
         </div>
         <span>GitHub</span>
@@ -78,6 +79,7 @@ const props = defineProps<{
             aria-hidden="true"
             width="20"
             height="20"
+            class="dark:invert"
           />
         </div>
         <span>Live</span>
