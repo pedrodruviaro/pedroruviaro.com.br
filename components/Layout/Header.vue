@@ -50,42 +50,53 @@ const isLargeScreen = useMediaQuery("(min-width: 900px)")
           </NuxtLink>
         </div>
 
-        <button
-          class="grid justify-center gap-1 rounded p-1 [@media(min-width:900px)]:hidden"
-          ref="hamburguerButtonRef"
-          @click="isMenuOpen = !isMenuOpen"
-          :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
-        >
-          <span
-            class="w-8 h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
-          ></span>
-          <span
-            class="h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
-            :class="{ 'w-6': isMenuOpen, 'w-8': !isMenuOpen }"
-          ></span>
-          <span
-            class="h-1 bg-brand-black relative right-0 ml-auto transition-all rounded-sm"
-            :class="{ 'w-4': isMenuOpen, 'w-8': !isMenuOpen }"
-          ></span>
-        </button>
-
-        <Transition>
-          <nav
-            v-show="isMenuOpen || isLargeScreen"
-            class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-brand-white [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1"
-            ref="menuRef"
+        <div class="flex-1 flex items-center justify-end gap-4">
+          <button
+            class="grid justify-center gap-1 rounded p-1 [@media(min-width:900px)]:hidden"
+            ref="hamburguerButtonRef"
+            @click="isMenuOpen = !isMenuOpen"
+            :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
           >
-            <NuxtLink
-              v-for="link in links"
-              :key="link.to"
-              :to="link.to"
-              @click="handleCloseMenu"
-              class="font-black [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
+            <span
+              class="w-8 h-1 bg-neutral-950 dark:bg-neutral-200 relative right-0 ml-auto transition-all rounded-sm"
+            ></span>
+            <span
+              class="h-1 bg-neutral-950 dark:bg-neutral-200 relative right-0 ml-auto transition-all rounded-sm"
+              :class="{ 'w-6': isMenuOpen, 'w-8': !isMenuOpen }"
+            ></span>
+            <span
+              class="h-1 bg-neutral-950 dark:bg-neutral-200 relative right-0 ml-auto transition-all rounded-sm"
+              :class="{ 'w-4': isMenuOpen, 'w-8': !isMenuOpen }"
+            ></span>
+          </button>
+
+          <Transition>
+            <nav
+              v-show="isMenuOpen || isLargeScreen"
+              class="menu flex flex-col gap-3 items-center absolute left-0 right-0 top-[100%] py-4 mt-px z-10 bg-neutral-200 dark:bg-neutral-800 [@media(min-width:900px)]:flex-row [@media(min-width:900px)]:relative [@media(min-width:900px)]:top-0 [@media(min-width:900px)]:p-0 [@media(min-width:900px)]:mt-auto [@media(min-width:900px)]:bg-transparent [@media(min-width:900px)]:z-0 [@media(min-width:900px)]:visible [@media(min-width:900px)]:translate-x-0 [@media(min-width:900px)]:opacity-1"
+              ref="menuRef"
             >
-              {{ link.label }}
-            </NuxtLink>
-          </nav>
-        </Transition>
+              <NuxtLink
+                v-for="link in links"
+                :key="link.to"
+                :to="link.to"
+                @click="handleCloseMenu"
+                class="font-black [@media(min-width:900px)]:text-lg hover:opacity-75 focus:opacity-75 text-lg"
+              >
+                {{ link.label }}
+              </NuxtLink>
+            </nav>
+          </Transition>
+
+          <ClientOnly>
+            <template #fallback>
+              <div
+                class="h-6 w-12 relative rounded-full bg-neutral-800 dark:bg-neutral-300 flex items-center px-1 transition-colors"
+              ></div>
+            </template>
+            <DarkModeToggler />
+          </ClientOnly>
+        </div>
       </div>
     </div>
   </BaseContainer>
