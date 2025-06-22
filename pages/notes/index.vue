@@ -19,11 +19,11 @@ const initialPage = computed(() => parseInt(route.query.page as string) || 1)
 currentPage.value = initialPage.value
 skip.value = (currentPage.value - 1) * LIMIT
 
-const { data: totalCount } = await useAsyncData("home-notes-count", () =>
+const { data: totalCount } = await useAsyncData("notes-count", () =>
   queryContent("/notes").count()
 )
 
-const { data } = await useAsyncData("home-notes", () =>
+const { data } = await useAsyncData("notes", () =>
   queryContent("/notes").sort({ date: -1 }).limit(LIMIT).skip(skip.value).find()
 )
 
