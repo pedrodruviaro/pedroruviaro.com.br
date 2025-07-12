@@ -12,10 +12,6 @@ const links = [
     label: "Notas",
     to: "/notes",
   },
-  {
-    label: "Projetos",
-    to: "/projects",
-  },
 ]
 
 const isMenuOpen = ref(false)
