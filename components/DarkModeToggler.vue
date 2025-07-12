@@ -7,14 +7,14 @@ const colorMode = useColorMode()
     v-if="colorMode"
     aria-label="Change site theme"
     type="button"
-    class="h-6 w-12 relative rounded-full bg-neutral-800 dark:bg-neutral-300 flex items-center px-1 transition-colors"
+    class="h-5 w-10 relative rounded-full bg-neutral-800 dark:bg-neutral-300 flex items-center px-1 transition-colors"
     @click="
       colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
     "
   >
     <span
       class="inline-block transition-transform"
-      :class="{ 'translate-x-5': colorMode.value === 'light' }"
+      :class="{ 'translate-x-4': colorMode.value === 'light' }"
     >
       <!-- Moon -->
       <svg
