@@ -21,7 +21,7 @@ useHead({
 <style>
 html,
 body {
-  @apply bg-neutral-200 text-neutral-900 scroll-smooth overflow-x-hidden font-[Inter] dark:bg-neutral-900 dark:text-neutral-200 transition-colors duration-200;
+  @apply bg-neutral-200 text-neutral-900 scroll-smooth overflow-x-hidden dark:bg-neutral-900 dark:text-neutral-200 transition-colors duration-200;
 }
 
 a {

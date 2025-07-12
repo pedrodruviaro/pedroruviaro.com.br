@@ -37,7 +37,7 @@ export const jobExperiences = [
 export const volunteerExperiences = [
   {
     title: "Desenvolvedor Front-End @ COMQ",
-    subtitle: "dez de 2024 - momento",
+    subtitle: "Dez de 2024 - Maio de 2025",
     content: [
       "Auxílio na elaboração e criação do novo site da COMQ (Centro de Oportunidades do Mário Quintana).",
     ],

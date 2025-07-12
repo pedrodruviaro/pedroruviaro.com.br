@@ -56,20 +56,5 @@ const stack = [
       otimização web, além de experiência em lidar com clientes, prazos e
       mudanças de escopo.
     </p>
-
-    <p>
-      <NuxtLink to="/projects" class="border-b border-dashed"
-        ><strong>Conheça alguns dos projetos pessoais</strong></NuxtLink
-      >
-      ou acesse meu
-      <a
-        href="https://github.com/pedrodruviaro/"
-        target="_blank"
-        rel="nofollow"
-        class="border-b border-dashed"
-        ><strong>GitHub</strong></a
-      >
-      e explore o que ando desenvolvendo.
-    </p>
   </AboutSection>
 </template>
