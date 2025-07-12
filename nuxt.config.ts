@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@vueuse/nuxt",
     "@nuxtjs/color-mode",
-    "@nuxtjs/google-fonts",
   ],
   site: {
     url: "https://pedroruviaro.com.br/",
@@ -39,14 +38,6 @@ export default defineNuxtConfig({
         "ts",
         "php",
       ],
-    },
-  },
-  googleFonts: {
-    preload: true,
-    preconnect: true,
-    display: "swap",
-    families: {
-      Inter: true,
     },
   },
 })
