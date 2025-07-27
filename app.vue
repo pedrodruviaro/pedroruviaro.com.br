@@ -37,4 +37,9 @@ a {
   opacity: 0;
   filter: blur(0.5rem);
 }
+
+/* remove underline form h2 titles inside `prose` */
+h2 a {
+  text-decoration: none !important;
+}
 </style>
