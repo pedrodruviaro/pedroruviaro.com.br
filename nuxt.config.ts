@@ -37,6 +37,7 @@ export default defineNuxtConfig({
         "typescript",
         "ts",
         "php",
+        "go",
       ],
     },
   },
